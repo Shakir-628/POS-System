@@ -1,0 +1,525 @@
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.config
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.manifest
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.application
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.pdb
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\Microsoft.CSharp.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\MySql.Data.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Data.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Deployment.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Drawing.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Web.Services.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.DataVisualization.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Xml.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Xml.Linq.dll
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCategory.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCheckout.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgClient.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgConversionForm.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIdleStatus.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIntervalSettings.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgInventoryAdjust.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPasswordAuth.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPermission.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPo.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgProducts.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgRestoreDB.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgSupplier.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgTransactionHistoy.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUnits.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUsers.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmBasyo.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmCategory.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChequeMonitoring.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChiumartRetail.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmClient.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmInventoryMonitoring.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLicense.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLogin.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPermissions.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPO.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPOS.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmProduct.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSalesGeneration.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSupplier.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUnits.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUsers.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgAuditTrailReport.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgClientListReport.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgIndividualLog.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgManualInventory.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgProductReport.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesEndofDay.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesReport.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSupplierReport.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgUserReport.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportMenuDialogs.dlgSalesReportMenu.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.frmMain.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Properties.Resources.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmOrReport.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmTokenReport.resources
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.GenerateResource.Cache
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\RdlCompile.cache
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\RdlCompile.compiled
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe.manifest
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.application
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.pdb
+C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\MySqlBackup.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.config
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.manifest
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.application
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.pdb
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\Microsoft.CSharp.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\Microsoft.ReportViewer.Common.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\MySqlBackup.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Data.DataSetExtensions.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Data.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Deployment.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Drawing.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Web.Services.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.DataVisualization.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Xml.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\System.Xml.Linq.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCategory.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCheckout.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgClient.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgConversionForm.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIdleStatus.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIntervalSettings.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgInventoryAdjust.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPasswordAuth.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPermission.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPo.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgProducts.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgRestoreDB.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgSupplier.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgTransactionHistoy.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUnits.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUsers.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmBasyo.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmCategory.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChequeMonitoring.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChiumartRetail.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmClient.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmInventoryMonitoring.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLicense.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLogin.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPermissions.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPO.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPOS.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmProduct.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSalesGeneration.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSupplier.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUnits.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUsers.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgAuditTrailReport.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgClientListReport.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgIndividualLog.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgManualInventory.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgProductReport.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesEndofDay.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesReport.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSupplierReport.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgUserReport.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportMenuDialogs.dlgSalesReportMenu.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.frmMain.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Properties.Resources.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmOrReport.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmTokenReport.resources
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.GenerateResource.Cache
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe.manifest
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.application
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.pdb
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csprojResolveAssemblyReference.cache
+E:\poschi\14-1-18\ChiuMartSAIS2-master\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.CoreCompileInputs.cache
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.config
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.manifest
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.application
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.pdb
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\Microsoft.CSharp.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\MySql.Data.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\MySqlBackup.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Data.DataSetExtensions.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Data.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Deployment.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Drawing.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Web.Services.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.DataVisualization.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Xml.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Xml.Linq.dll
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.AssemblyReference.cache
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCategory.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCheckout.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgClient.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgConversionForm.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIdleStatus.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIntervalSettings.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgInventoryAdjust.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPasswordAuth.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPermission.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPo.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgProducts.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgRestoreDB.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgSupplier.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgTransactionHistoy.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUnits.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUsers.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmBasyo.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmCategory.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChequeMonitoring.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChiumartRetail.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmClient.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmInventoryMonitoring.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLicense.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLogin.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPermissions.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPO.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPOS.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmProduct.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSalesGeneration.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSupplier.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUnits.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUsers.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgAuditTrailReport.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgClientListReport.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgIndividualLog.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgManualInventory.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgProductReport.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesEndofDay.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesReport.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSupplierReport.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgUserReport.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportMenuDialogs.dlgSalesReportMenu.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.frmMain.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Properties.Resources.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmOrReport.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmTokenReport.resources
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.GenerateResource.cache
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.CoreCompileInputs.cache
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe.manifest
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.application
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.CopyComplete
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.pdb
+E:\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmEndShift.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCategory.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCheckout.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgClient.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgConversionForm.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIdleStatus.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIntervalSettings.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgInventoryAdjust.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPasswordAuth.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPermission.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPo.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgProducts.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgRestoreDB.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgSupplier.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgTransactionHistoy.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUnits.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUsers.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmBasyo.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmCategory.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChequeMonitoring.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChiumartRetail.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmClient.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmEndShift.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmInventoryMonitoring.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLicense.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLogin.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPermissions.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPO.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPOS.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmProduct.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSalesGeneration.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSupplier.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUnits.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUsers.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgAuditTrailReport.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgClientListReport.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgIndividualLog.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgManualInventory.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgProductReport.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesEndofDay.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesReport.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSupplierReport.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgUserReport.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportMenuDialogs.dlgSalesReportMenu.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.frmMain.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Properties.Resources.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmOrReport.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmTokenReport.resources
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.pdb
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.config
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.manifest
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.application
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.pdb
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\Microsoft.CSharp.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\MySql.Data.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\MySqlBackup.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Data.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Deployment.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Drawing.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Web.Services.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.DataVisualization.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Xml.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Xml.Linq.dll
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe.manifest
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.application
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.CopyComplete
+C:\Users\HP\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmRefund.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.config
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.manifest
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.application
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.pdb
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\Microsoft.CSharp.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\Microsoft.ReportViewer.Common.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\MySql.Data.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\MySqlBackup.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Data.DataSetExtensions.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Data.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Deployment.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Drawing.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Web.Services.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.DataVisualization.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Xml.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Xml.Linq.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csprojResolveAssemblyReference.cache
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCategory.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCheckout.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgClient.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgConversionForm.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIdleStatus.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIntervalSettings.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgInventoryAdjust.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPasswordAuth.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPermission.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPo.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgProducts.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgRestoreDB.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgSupplier.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgTransactionHistoy.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUnits.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUsers.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmBasyo.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmCategory.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChequeMonitoring.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChiumartRetail.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmClient.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmEndShift.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmInventoryMonitoring.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLicense.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLogin.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPermissions.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPO.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPOS.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmProduct.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmRefund.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSalesGeneration.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSupplier.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUnits.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUsers.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgAuditTrailReport.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgClientListReport.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgIndividualLog.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgManualInventory.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgProductReport.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesEndofDay.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesReport.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSupplierReport.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgUserReport.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportMenuDialogs.dlgSalesReportMenu.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.frmMain.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Properties.Resources.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmOrReport.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmTokenReport.resources
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.GenerateResource.Cache
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.CoreCompileInputs.cache
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe.manifest
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.application
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe
+E:\POS 11212021\POS 11212021\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.pdb
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.config
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.manifest
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.application
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.pdb
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\Microsoft.CSharp.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\MySql.Data.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\MySqlBackup.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Data.DataSetExtensions.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Data.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Deployment.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Drawing.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Web.Services.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.DataVisualization.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Xml.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Xml.Linq.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\Microsoft.SqlServer.Types.dll
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.AssemblyReference.cache
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCategory.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCheckout.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgClient.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgConversionForm.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIdleStatus.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIntervalSettings.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgInventoryAdjust.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPasswordAuth.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPermission.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPo.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgProducts.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgRestoreDB.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgSupplier.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgTransactionHistoy.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUnits.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUsers.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmBasyo.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmCategory.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChequeMonitoring.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChiumartRetail.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmClient.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmEndShift.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmInventoryMonitoring.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLicense.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLogin.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPermissions.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPO.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPOS.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmProduct.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmRefund.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSalesGeneration.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSupplier.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUnits.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUsers.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgAuditTrailReport.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgClientListReport.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgIndividualLog.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgManualInventory.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgProductReport.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesEndofDay.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesReport.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSupplierReport.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgUserReport.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportMenuDialogs.dlgSalesReportMenu.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.frmMain.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Properties.Resources.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmOrReport.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmTokenReport.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.GenerateResource.cache
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.CoreCompileInputs.cache
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe.manifest
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.application
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.CopyComplete
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.pdb
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgCategoryInventory.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgEndShiftDayReport.resources
+F:\POS System App\POS 11212021 (1)\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesReturnReport.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.config
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe.manifest
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.application
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.exe
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\ChiuMartSAIS2.pdb
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\Microsoft.CSharp.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\MySql.Data.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\MySqlBackup.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Data.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Deployment.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Drawing.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Web.Services.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.DataVisualization.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Windows.Forms.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Xml.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\System.Xml.Linq.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCategory.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgCheckout.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgClient.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgConversionForm.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIdleStatus.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgIntervalSettings.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgInventoryAdjust.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPasswordAuth.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPermission.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgPo.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgProducts.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgRestoreDB.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgSupplier.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgTransactionHistoy.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUnits.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.Dialogs.dlgUsers.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmBasyo.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmCategory.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChequeMonitoring.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmChiumartRetail.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmClient.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmEndShift.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmInventoryMonitoring.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLicense.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmLogin.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPermissions.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPO.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmPOS.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmProduct.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmRefund.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSalesGeneration.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmSupplier.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUnits.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.frmUsers.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgAuditTrailReport.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgCategoryInventory.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgClientListReport.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgEndShiftDayReport.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgIndividualLog.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgManualInventory.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgProductReport.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesEndofDay.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesReport.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSalesReturnReport.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgSupplierReport.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportDialog.dlgUserReport.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.App.ReportMenuDialogs.dlgSalesReportMenu.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.frmMain.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Properties.Resources.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmOrReport.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.Reports.frmTokenReport.resources
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.GenerateResource.cache
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe.manifest
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.application
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.csproj.CopyComplete
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.exe
+C:\Users\Lenovo\Desktop\ChiuMartSAIS2-master_01112021\ChiuMartSAIS2\obj\Debug\ChiuMartSAIS2.pdb

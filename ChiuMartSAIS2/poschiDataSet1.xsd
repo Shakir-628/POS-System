@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="poschiDataSet" targetNamespace="http://tempuri.org/poschiDataSet1.xsd" xmlns:mstns="http://tempuri.org/poschiDataSet1.xsd" xmlns="http://tempuri.org/poschiDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="chuisaisConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="chuisaisConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ChiuMartSAIS2.Properties.Settings.GlobalReference.Default.chuisaisConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="basyoTableAdapter" GeneratorDataComponentClassName="basyoTableAdapter" Name="basyo" UserDataComponentName="basyoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.basyo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, basyo_returned, status, date_created FROM basyo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="categoryTableAdapter" GeneratorDataComponentClassName="categoryTableAdapter" Name="category" UserDataComponentName="categoryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.category" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT categoryId, categoryName, created_date, updated_date, status FROM category</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="chequeTableAdapter" GeneratorDataComponentClassName="chequeTableAdapter" Name="cheque" UserDataComponentName="chequeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.cheque" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, chequeNo, chequeName, chequeBank, chequeBranch, chequeAmount, chequeDate, chequeStatus, status FROM cheque</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clientTableAdapter" GeneratorDataComponentClassName="clientTableAdapter" Name="client" UserDataComponentName="clientTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.client" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT clientId, clientName, clientContact, created_date, updated_date, status, clientAddress FROM client</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="configTableAdapter" GeneratorDataComponentClassName="configTableAdapter" Name="config" UserDataComponentName="configTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.config" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, name, value, status, createdby, creationdate FROM config</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="conversionTableAdapter" GeneratorDataComponentClassName="conversionTableAdapter" Name="conversion" UserDataComponentName="conversionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.conversion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, username, created_date FROM conversion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="logsTableAdapter" GeneratorDataComponentClassName="logsTableAdapter" Name="logs" UserDataComponentName="logsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.logs" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, relationId, clientId, supplierId, username, quantity, unit_id, product_id, price, paymentMethod, log_type, created_date, supplierPrice FROM logs</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="permissionTableAdapter" GeneratorDataComponentClassName="permissionTableAdapter" Name="permission" UserDataComponentName="permissionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.permission" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT permissionId, role, products, categories, units, suppliers, permission, clients, users, pos, inventorymonitoring, purchaseorder, chequemonitoring, inventoryreport, salesreport, usersreport, logsreport, clientreport, supplierreport, systemutilities, created_date, updated_date, status, manualInventoryReport FROM permission</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="poTableAdapter" GeneratorDataComponentClassName="poTableAdapter" Name="po" UserDataComponentName="poTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.po" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, poId, productId, supplierId, poDate, qty, unitId, poStatus, status, oldPrice FROM po</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="po_queueTableAdapter" GeneratorDataComponentClassName="po_queueTableAdapter" Name="po_queue" UserDataComponentName="po_queueTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.po_queue" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, product_id, supplier_price, stock FROM po_queue</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="productsTableAdapter" GeneratorDataComponentClassName="productsTableAdapter" Name="products" UserDataComponentName="productsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.products" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT productId, productName, categoryId, productPrice, unitId, supplierPrice, productStock, productSafetyStock, created_time, updated_time, status, barcode FROM products</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="purchaseorderTableAdapter" GeneratorDataComponentClassName="purchaseorderTableAdapter" Name="purchaseorder" UserDataComponentName="purchaseorderTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.purchaseorder" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT poId, supplierId, productId, status, dateArrival, qty FROM purchaseorder</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="supplierTableAdapter" GeneratorDataComponentClassName="supplierTableAdapter" Name="supplier" UserDataComponentName="supplierTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.supplier" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT supplierId, supplierName, supplierContact, supplierContactPerson, created_date, updated_date, status, supplierAddress FROM supplier</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="transactionTableAdapter" GeneratorDataComponentClassName="transactionTableAdapter" Name="transaction" UserDataComponentName="transactionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.transaction" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT transId, orNo, productId, clientId, paymentMethod, transDate, transStatus, qty, unitId, supplierPrice, unitPrice, paidBalance, yellowBasyoReturned, transparentBasyoReturned FROM transaction</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="unitsTableAdapter" GeneratorDataComponentClassName="unitsTableAdapter" Name="units" UserDataComponentName="unitsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="chuisaisConnectionString (Settings)" DbObjectName="poschi.units" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT unitId, unitDesc, created_date, updated_date, status FROM units</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="poschiDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="poschiDataSet" msprop:Generator_UserDSName="poschiDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="basyo" msprop:Generator_TableClassName="basyoDataTable" msprop:Generator_TableVarName="tablebasyo" msprop:Generator_TablePropName="basyo" msprop:Generator_RowDeletingName="basyoRowDeleting" msprop:Generator_RowChangingName="basyoRowChanging" msprop:Generator_RowEvHandlerName="basyoRowChangeEventHandler" msprop:Generator_RowDeletedName="basyoRowDeleted" msprop:Generator_UserTableName="
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    " msprop:Generator_RowChangedName="basyoRowChanged" msprop:Generator_RowEvArgName="basyoRowChangeEvent" msprop:Generator_RowClassName="basyoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="category" msprop:Generator_TableClassName="categoryDataTable" msprop:Generator_TableVarName="tablecategory" msprop:Generator_TablePropName="category" msprop:Generator_RowDeletingName="categoryRowDeleting" msprop:Generator_RowChangingName="categoryRowChanging" msprop:Generator_RowEvHandlerName="categoryRowChangeEventHandler" msprop:Generator_RowDeletedName="categoryRowDeleted" msprop:Generator_UserTableName="category" msprop:Generator_RowChangedName="categoryRowChanged" msprop:Generator_RowEvArgName="categoryRowChangeEvent" msprop:Generator_RowClassName="categoryRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cheque" msprop:Generator_TableClassName="chequeDataTable" msprop:Generator_TableVarName="tablecheque" msprop:Generator_TablePropName="cheque" msprop:Generator_RowDeletingName="chequeRowDeleting" msprop:Generator_RowChangingName="chequeRowChanging" msprop:Generator_RowEvHandlerName="chequeRowChangeEventHandler" msprop:Generator_RowDeletedName="chequeRowDeleted" msprop:Generator_UserTableName="cheque" msprop:Generator_RowChangedName="chequeRowChanged" msprop:Generator_RowEvArgName="chequeRowChangeEvent" msprop:Generator_RowClassName="chequeRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="client" msprop:Generator_TableClassName="clientDataTable" msprop:Generator_TableVarName="tableclient" msprop:Generator_TablePropName="client" msprop:Generator_RowDeletingName="clientRowDeleting" msprop:Generator_RowChangingName="clientRowChanging" msprop:Generator_RowEvHandlerName="clientRowChangeEventHandler" msprop:Generator_RowDeletedName="clientRowDeleted" msprop:Generator_UserTableName="client" msprop:Generator_RowChangedName="clientRowChanged" msprop:Generator_RowEvArgName="clientRowChangeEvent" msprop:Generator_RowClassName="clientRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="config" msprop:Generator_TableClassName="configDataTable" msprop:Generator_TableVarName="tableconfig" msprop:Generator_TablePropName="config" msprop:Generator_RowDeletingName="configRowDeleting" msprop:Generator_RowChangingName="configRowChanging" msprop:Generator_RowEvHandlerName="configRowChangeEventHandler" msprop:Generator_RowDeletedName="configRowDeleted" msprop:Generator_UserTableName="config" msprop:Generator_RowChangedName="configRowChanged" msprop:Generator_RowEvArgName="configRowChangeEvent" msprop:Generator_RowClassName="configRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="conversion" msprop:Generator_TableClassName="conversionDataTable" msprop:Generator_TableVarName="tableconversion" msprop:Generator_TablePropName="conversion" msprop:Generator_RowDeletingName="conversionRowDeleting" msprop:Generator_RowChangingName="conversionRowChanging" msprop:Generator_RowEvHandlerName="conversionRowChangeEventHandler" msprop:Generator_RowDeletedName="conversionRowDeleted" msprop:Generator_UserTableName="conversion" msprop:Generator_RowChangedName="conversionRowChanged" msprop:Generator_RowEvArgName="conversionRowChangeEvent" msprop:Generator_RowClassName="conversionRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="logs" msprop:Generator_TableClassName="logsDataTable" msprop:Generator_TableVarName="tablelogs" msprop:Generator_TablePropName="logs" msprop:Generator_RowDeletingName="logsRowDeleting" msprop:Generator_RowChangingName="logsRowChanging" msprop:Generator_RowEvHandlerName="logsRowChangeEventHandler" msprop:Generator_RowDeletedName="logsRowDeleted" msprop:Generator_UserTableName="logs" msprop:Generator_RowChangedName="logsRowChanged" msprop:Generator_RowEvArgName="logsRowChangeEvent" msprop:Generator_RowClassName="logsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="or">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="permission" msprop:Generator_TableClassName="permissionDataTable" msprop:Generator_TableVarName="tablepermission" msprop:Generator_TablePropName="permission" msprop:Generator_RowDeletingName="permissionRowDeleting" msprop:Generator_RowChangingName="permissionRowChanging" msprop:Generator_RowEvHandlerName="permissionRowChangeEventHandler" msprop:Generator_RowDeletedName="permissionRowDeleted" msprop:Generator_UserTableName="permission" msprop:Generator_RowChangedName="permissionRowChanged" msprop:Generator_RowEvArgName="permissionRowChangeEvent" msprop:Generator_RowClassName="permissionRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="po" msprop:Generator_TableClassName="poDataTable" msprop:Generator_TableVarName="tablepo" msprop:Generator_TablePropName="po" msprop:Generator_RowDeletingName="poRowDeleting" msprop:Generator_RowChangingName="poRowChanging" msprop:Generator_RowEvHandlerName="poRowChangeEventHandler" msprop:Generator_RowDeletedName="poRowDeleted" msprop:Generator_UserTableName="po" msprop:Generator_RowChangedName="poRowChanged" msprop:Generator_RowEvArgName="poRowChangeEvent" msprop:Generator_RowClassName="poRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="po_queue" msprop:Generator_TableClassName="po_queueDataTable" msprop:Generator_TableVarName="tablepo_queue" msprop:Generator_TablePropName="po_queue" msprop:Generator_RowDeletingName="po_queueRowDeleting" msprop:Generator_RowChangingName="po_queueRowChanging" msprop:Generator_RowEvHandlerName="po_queueRowChangeEventHandler" msprop:Generator_RowDeletedName="po_queueRowDeleted" msprop:Generator_UserTableName="po_queue" msprop:Generator_RowChangedName="po_queueRowChanged" msprop:Generator_RowEvArgName="po_queueRowChangeEvent" msprop:Generator_RowClassName="po_queueRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="products" msprop:Generator_TableClassName="productsDataTable" msprop:Generator_TableVarName="tableproducts" msprop:Generator_TablePropName="products" msprop:Generator_RowDeletingName="productsRowDeleting" msprop:Generator_RowChangingName="productsRowChanging" msprop:Generator_RowEvHandlerName="productsRowChangeEventHandler" msprop:Generator_RowDeletedName="productsRowDeleted" msprop:Generator_UserTableName="products" msprop:Generator_RowChangedName="productsRowChanged" msprop:Generator_RowEvArgName="productsRowChangeEvent" msprop:Generator_RowClassName="productsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="purchaseorder" msprop:Generator_TableClassName="purchaseorderDataTable" msprop:Generator_TableVarName="tablepurchaseorder" msprop:Generator_TablePropName="purchaseorder" msprop:Generator_RowDeletingName="purchaseorderRowDeleting" msprop:Generator_RowChangingName="purchaseorderRowChanging" msprop:Generator_RowEvHandlerName="purchaseorderRowChangeEventHandler" msprop:Generator_RowDeletedName="purchaseorderRowDeleted" msprop:Generator_UserTableName="purchaseorder" msprop:Generator_RowChangedName="purchaseorderRowChanged" msprop:Generator_RowEvArgName="purchaseorderRowChangeEvent" msprop:Generator_RowClassName="purchaseorderRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="supplier" msprop:Generator_TableClassName="supplierDataTable" msprop:Generator_TableVarName="tablesupplier" msprop:Generator_TablePropName="supplier" msprop:Generator_RowDeletingName="supplierRowDeleting" msprop:Generator_RowChangingName="supplierRowChanging" msprop:Generator_RowEvHandlerName="supplierRowChangeEventHandler" msprop:Generator_RowDeletedName="supplierRowDeleted" msprop:Generator_UserTableName="supplier" msprop:Generator_RowChangedName="supplierRowChanged" msprop:Generator_RowEvArgName="supplierRowChangeEvent" msprop:Generator_RowClassName="supplierRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="transaction" msprop:Generator_TableClassName="transactionDataTable" msprop:Generator_TableVarName="tabletransaction" msprop:Generator_TablePropName="transaction" msprop:Generator_RowDeletingName="transactionRowDeleting" msprop:Generator_RowChangingName="transactionRowChanging" msprop:Generator_RowEvHandlerName="transactionRowChangeEventHandler" msprop:Generator_RowDeletedName="transactionRowDeleted" msprop:Generator_UserTableName="transaction" msprop:Generator_RowChangedName="transactionRowChanged" msprop:Generator_RowEvArgName="transactionRowChangeEvent" msprop:Generator_RowClassName="transactionRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="units" msprop:Generator_TableClassName="unitsDataTable" msprop:Generator_TableVarName="tableunits" msprop:Generator_TablePropName="units" msprop:Generator_RowDeletingName="unitsRowDeleting" msprop:Generator_RowChangingName="unitsRowChanging" msprop:Generator_RowEvHandlerName="unitsRowChangeEventHandler" msprop:Generator_RowDeletedName="unitsRowDeleted" msprop:Generator_UserTableName="units" msprop:Generator_RowChangedName="unitsRowChanged" msprop:Generator_RowEvArgName="unitsRowChangeEvent" msprop:Generator_RowClassName="unitsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="user">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
