@@ -9,9 +9,7 @@ namespace ChiuMartSAIS2.Classes
     class Configuration
     {
         //configuration variables
-        // private string _cnString = "Server=localhost;Database=poschi;Uid=root;Pwd=root123;Convert Zero Datetime=true;";
-        //private string _cnString = "Server=localhost;Database=raza_store;Uid=root;Pwd=;Convert Zero Datetime=true;";
-        private string _cnString = "Server=localhost;Database=raza_store;Uid=root;Pwd=;Convert Zero Datetime=true;";
+        private string _cnString = "Server=localhost;Database=lifecare;Uid=lifecare1;Pwd=Ahmed@321;Convert Zero Datetime=true;";
 
         //setters and getters
         public string connectionstring
