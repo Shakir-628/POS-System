@@ -1,9 +1,10 @@
 ﻿using ChiuMartSAIS2.Classes;
-using MySql.Data.MySqlClient;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -71,16 +72,16 @@ namespace ChiuMartSAIS2.App
 
         public void OpeningBalanceTotal()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    string sqlQuery = "SELECT SUM(unitPrice) AS openingAmount FROM TRANSACTION WHERE CAST(transdate AS DATE) = DATE_ADD(CURDATE(), INTERVAL -1 DAY)";
+                    string sqlQuery = "SELECT SUM(unitPrice) AS openingAmount FROM [TRANSACTION] WHERE CAST(transdate AS DATE) = DATE_ADD(CURDATE(), INTERVAL -1 DAY)";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -95,7 +96,7 @@ namespace ChiuMartSAIS2.App
                         }
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -105,16 +106,16 @@ namespace ChiuMartSAIS2.App
         }
         public void GetSaleAmount()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    string sqlQuery = "SELECT COALESCE(SUM(UnitPrice*qty),0) AS sale_amount FROM TRANSACTION WHERE CAST(transdate AS DATE) = CURDATE()";
+                    string sqlQuery = "SELECT COALESCE(SUM(UnitPrice*qty),0) AS sale_amount FROM [TRANSACTION] WHERE CAST(transdate AS DATE) = GetDate()";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -130,7 +131,7 @@ namespace ChiuMartSAIS2.App
                         }
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -141,16 +142,16 @@ namespace ChiuMartSAIS2.App
 
         public void GetRefundAmount()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    string sqlQuery = "SELECT COALESCE(SUM(productPrice*qty),0) AS refund_amount FROM refund WHERE CAST(created_time AS DATE) = CURDATE()";
+                    string sqlQuery = "SELECT COALESCE(SUM(productPrice*qty),0) AS refund_amount FROM refund WHERE CAST(created_time AS DATE) = GetDate()";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -167,7 +168,7 @@ namespace ChiuMartSAIS2.App
                         }
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -330,14 +331,14 @@ namespace ChiuMartSAIS2.App
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "INSERT INTO EndShift (TotalAmount, OpeningAmount, NetSale, CashSale, RefundAmount, CashinHand,Status) VALUES " +
                         "(@TotalAmount, @OpeningAmount, @NetSale, @CashSale, @RefundAmount, @CashinHand, 'active')";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("TotalAmount", txtTotalEndShift.Text);
                     sqlCmd.Parameters.AddWithValue("OpeningAmount", lblOA.Text);
@@ -350,7 +351,7 @@ namespace ChiuMartSAIS2.App
                     new dbHelper().backupinset(sqlCmd, "INSERT", "EndShift");
                     MessageBox.Show(this, "End Shift successfully added", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using MySql.Data.MySqlClient;
+
 using ChiuMartSAIS2.Classes;
+using System.Data.SqlClient;
 
 namespace ChiuMartSAIS2.App.Dialogs
 {
@@ -45,18 +46,18 @@ namespace ChiuMartSAIS2.App.Dialogs
 
         private void getViewTransaction()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    string sqlQuery = "SELECT t.unitPrice, t.orNo, t.qty, t.yellowBasyoReturned, t.transparentBasyoReturned, u.unitDesc, c.clientName, c.clientAddress, p.productName FROM transaction as t LEFT JOIN client as c ON t.clientId = c.clientId INNER JOIN products as p ON t.productId = p.productId INNER JOIN units as u ON t.unitId = u.unitId WHERE t.orNo = @crit";
+                    string sqlQuery = "SELECT t.unitPrice, t.orNo, t.qty, t.yellowBasyoReturned, t.transparentBasyoReturned, u.unitDesc, c.clientName, c.clientAddress, p.productName FROM [transaction] as t LEFT JOIN client as c ON t.clientId = c.clientId INNER JOIN products as p ON t.productId = p.productId INNER JOIN units as u ON t.unitId = u.unitId WHERE t.orNo = @crit";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("crit", lstClients.SelectedItems[lstClients.SelectedItems.Count - 1].Text);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -71,7 +72,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                         transparentBasyoReturned = reader["transparentBasyoReturned"].ToString();
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -80,17 +81,17 @@ namespace ChiuMartSAIS2.App.Dialogs
         }
         private double getClientID(string crit)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT clientId FROM client WHERE clientName = @crit";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("crit", crit);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
 
 
@@ -102,7 +103,7 @@ namespace ChiuMartSAIS2.App.Dialogs
 
                     return tmp;
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Message);
                     MessageBox.Show(this, "Error Retrieving client id", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -114,20 +115,20 @@ namespace ChiuMartSAIS2.App.Dialogs
 
         private void searchClient(string criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT t.*, c.clientName, p.productPrice FROM transaction as t LEFT JOIN client as c ON t.clientId = c.clientId INNER JOIN products as p ON t.productId = p.productId WHERE t.transDate BETWEEN @from AND @to AND t.orNo LIKE @criteria ORDER BY t.orNo ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("criteria", "%" + criteria + "%");
 
                     sqlCmd.Parameters.AddWithValue("from", dtpFrom.Value.Date);
                     sqlCmd.Parameters.AddWithValue("to", dtpTo.Value.AddDays(1).Date);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstClients.Items.Clear();
                     int ctr = -1;
@@ -205,7 +206,7 @@ namespace ChiuMartSAIS2.App.Dialogs
 
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -215,19 +216,19 @@ namespace ChiuMartSAIS2.App.Dialogs
 
         private void populateTransaction()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    string sqlQuery = "SELECT t.*, c.clientName FROM transaction as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE t.transDate BETWEEN @from AND @to AND transStatus != 'Verified' ORDER BY orNo ASC";
+                    string sqlQuery = "SELECT t.*, c.clientName FROM [transaction] as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE t.transDate BETWEEN @from AND @to AND transStatus != 'Verified' ORDER BY orNo ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("from", dtpFrom.Value.Date);
                     sqlCmd.Parameters.AddWithValue("to", dtpTo.Value.AddDays(1).Date);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstClients.Items.Clear();
                     int ctr = -1;
@@ -316,7 +317,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                         }
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -326,19 +327,19 @@ namespace ChiuMartSAIS2.App.Dialogs
 
         private void searchTransaction()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    string sqlQuery = "SELECT t.*, c.clientName FROM transaction as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
+                    string sqlQuery = "SELECT t.*, c.clientName FROM [transaction] as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("from", dtpFrom.Value.Date);
                     sqlCmd.Parameters.AddWithValue("to", dtpTo.Value.AddDays(1).Date);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstClients.Items.Clear();
                     int ctr = -1;
@@ -368,7 +369,11 @@ namespace ChiuMartSAIS2.App.Dialogs
                                 double price = double.Parse(reader["unitPrice"].ToString());
                                 double qty = double.Parse(reader["qty"].ToString());
                                 double totalAmount = (price * qty);
-                                double balancePayment = double.Parse(reader["paidBalance"].ToString());
+                                double balancePayment = 0;
+                                if (reader["paidBalance"].ToString() == "0")
+                                {
+                                    balancePayment = double.Parse(reader["paidBalance"].ToString());
+                                }
                                 string method = (reader["paymentMethod"].ToString());
 
                                 lstClients.Items[lstClients.Items.Count - 1].SubItems.Add(string.Format("{0:C}", totalAmount));
@@ -397,7 +402,11 @@ namespace ChiuMartSAIS2.App.Dialogs
                             double price = double.Parse(reader["unitPrice"].ToString());
                             double qty = double.Parse(reader["qty"].ToString());
                             double totalAmount = (price * qty);
-                            double balancePayment = double.Parse(reader["paidBalance"].ToString());
+                            double balancePayment = 0;
+                            if (reader["paidBalance"].ToString() != "0")
+                            {
+                                balancePayment = double.Parse(reader["paidBalance"].ToString());
+                            }
                             string method = (reader["paymentMethod"].ToString());
 
                             lstClients.Items[lstClients.Items.Count - 1].SubItems.Add(string.Format("{0:C}", totalAmount));
@@ -415,7 +424,7 @@ namespace ChiuMartSAIS2.App.Dialogs
 
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -425,36 +434,36 @@ namespace ChiuMartSAIS2.App.Dialogs
 
         private void getTransactionByPayment(string status)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    string sqlQuery = "SELECT t.*, c.clientName FROM transaction as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE transStatus != 'Verified' AND t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
+                    string sqlQuery = "SELECT t.*, c.clientName FROM [transaction] as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE transStatus != 'Verified' AND t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
                     DateTime dateNow = DateTime.Today;
                     if (status == "Cash")
                     {
-                        sqlQuery = "SELECT t.*, c.clientName FROM transaction as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE paymentMethod = 'Cash' AND transStatus != 'Verified' AND t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
+                        sqlQuery = "SELECT t.*, c.clientName FROM [transaction] as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE paymentMethod = 'Cash' AND transStatus != 'Verified' AND t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
                     }
                     else if (status == "Cheque")
                     {
-                        sqlQuery = "SELECT t.*, c.clientName FROM transaction as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE paymentMethod = 'Cheque' AND transStatus != 'Verified' AND t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
+                        sqlQuery = "SELECT t.*, c.clientName FROM [transaction] as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE paymentMethod = 'Cheque' AND transStatus != 'Verified' AND t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
                     }
                     else if (status == "Balance")
                     {
-                        sqlQuery = "SELECT t.*, c.clientName FROM transaction as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE paymentMethod = 'Balance' AND transStatus != 'Verified' AND t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
+                        sqlQuery = "SELECT t.*, c.clientName FROM [transaction] as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE paymentMethod = 'Balance' AND transStatus != 'Verified' AND t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
                     }
                     else if (status == "Verified")
                     {
-                        sqlQuery = "SELECT t.*, c.clientName FROM transaction as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE transStatus = 'Verified' AND t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
+                        sqlQuery = "SELECT t.*, c.clientName FROM [transaction] as t LEFT JOIN client as c ON t.clientId = c.clientId WHERE transStatus = 'Verified' AND t.transDate BETWEEN @from AND @to ORDER BY orNo ASC";
                     }
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("from", dtpFrom.Value.Date);
                     sqlCmd.Parameters.AddWithValue("to", dtpTo.Value.AddDays(1).Date);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstClients.Items.Clear();
                     int ctr = -1;
@@ -471,8 +480,11 @@ namespace ChiuMartSAIS2.App.Dialogs
                                 double totalAmount = (price * qty);
                                 double grandTotal = lstAmount + totalAmount;
                                 lstClients.Items[ctr].SubItems[3].Text = string.Format("{0:C}", (grandTotal));
-
-                                double balancePayment = double.Parse(reader["paidBalance"].ToString());
+                                double balancePayment = 0;
+                                if (reader["paidBalance"].ToString() != "0")
+                                {
+                                    balancePayment = double.Parse(reader["paidBalance"].ToString());
+                                }
                                 string method = (reader["paymentMethod"].ToString());
                                 if (grandTotal != balancePayment && method == "Balance")
                                 {
@@ -496,7 +508,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                                 double price = double.Parse(reader["unitPrice"].ToString());
                                 double qty = double.Parse(reader["qty"].ToString());
                                 double totalAmount = (price * qty);
-                                double balancePayment = double.Parse(reader["paidBalance"].ToString());
+                                float balancePayment = float.Parse(reader["paidBalance"].ToString());
                                 string method = (reader["paymentMethod"].ToString());
 
                                 lstClients.Items[lstClients.Items.Count - 1].SubItems.Add(string.Format("{0:C}", totalAmount));
@@ -525,7 +537,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                             double price = double.Parse(reader["unitPrice"].ToString());
                             double qty = double.Parse(reader["qty"].ToString());
                             double totalAmount = (price * qty);
-                            double balancePayment = double.Parse(reader["paidBalance"].ToString());
+                            float balancePayment = float.Parse(reader["paidBalance"].ToString());
                             string method = (reader["paymentMethod"].ToString());
 
                             lstClients.Items[lstClients.Items.Count - 1].SubItems.Add(string.Format("{0:C}", totalAmount));
@@ -543,7 +555,7 @@ namespace ChiuMartSAIS2.App.Dialogs
 
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -555,11 +567,11 @@ namespace ChiuMartSAIS2.App.Dialogs
         {
             try
             {
-                using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection Con = new SqlConnection(conf.connectionstring))
                 {
                     Con.Open();
-                    string sqlQuery = "UPDATE transaction SET transStatus = 'Verified' WHERE orNo = @crit";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    string sqlQuery = "UPDATE [transaction] SET transStatus = 'Verified' WHERE orNo = @crit";
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("crit", crit);
 
                     sqlCmd.ExecuteNonQuery();
@@ -567,7 +579,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                     MessageBox.Show(this, "Transaction successfully verified", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Can't connect to database ", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -576,7 +588,7 @@ namespace ChiuMartSAIS2.App.Dialogs
 
         private void insertCheque(string bank, string branch, string chequeName, string chequeDate, string chequeNo, string amount)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -585,7 +597,7 @@ namespace ChiuMartSAIS2.App.Dialogs
 
                     Con.Open();
                     string sqlQuery = "INSERT INTO cheque (chequeNo, chequeName, chequeBank, chequeBranch, chequeAmount, chequeDate, status) VALUES (@chequeNo, @chequeName, @chequeBank, @chequeBranch, @chequeAmount, @chequeDate, 'active')";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("chequeNo", chequeNo);
                     sqlCmd.Parameters.AddWithValue("chequeName", chequeName);
@@ -597,7 +609,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                     sqlCmd.ExecuteNonQuery();
                     new dbHelper().backupinset(sqlCmd, "INSERT", "cheque");
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Transaction error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -607,13 +619,13 @@ namespace ChiuMartSAIS2.App.Dialogs
 
         private void updateTransaction(string paidBalance, string criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    string sqlQuery = "UPDATE transaction SET paidBalance = paidBalance + @paidBalance WHERE orNo = @criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    string sqlQuery = "UPDATE [transaction] SET paidBalance = paidBalance + @paidBalance WHERE orNo = @criteria";
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("paidBalance", paidBalance);
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
@@ -622,7 +634,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                     new dbHelper().backupinset(sqlCmd, "UPDATE", "transaction");
                     MessageBox.Show(this, "Accounts Receivables updated", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Updating Accounts Receivables error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

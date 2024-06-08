@@ -1,8 +1,9 @@
-﻿using MySql.Data.MySqlClient;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,17 +27,17 @@ namespace ChiuMartSAIS2.App.ReportDialog
 
         private void populateProduct()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT c.categoryid,c.categoryname,SUM(p.productSafetyStock) as productSafetyStock FROM Category c INNER JOIN products p ON p.categoryid = c.categoryid WHERE c.status = @status GROUP BY  c.categoryname,c.categoryid";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     dgvProduct.Rows.Clear();
 
@@ -46,7 +47,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
                         dgvProduct.Rows.Add(dataRow);
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -77,18 +78,18 @@ namespace ChiuMartSAIS2.App.ReportDialog
         private string populateStocks(string id)
         {
             string result = "";
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT productStock FROM products WHERE status = @status AND productId = @id ORDER BY productName ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("status", this.status);
                     sqlCmd.Parameters.AddWithValue("id", id);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -96,7 +97,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
                     }
                     return result;
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

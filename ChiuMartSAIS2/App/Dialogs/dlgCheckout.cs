@@ -189,7 +189,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                 //this.change = txtChange.Text;
                 //this.paid = cashrendered;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //MessageBox.Show(ex.Message.ToString());
                 txtChange.Text = "0.0";

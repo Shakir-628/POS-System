@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using MySql.Data.MySqlClient;
 using ChiuMartSAIS2.Classes;
+using System.Data.SqlClient;
 
 namespace ChiuMartSAIS2.App
 {
@@ -51,12 +50,12 @@ namespace ChiuMartSAIS2.App
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sqlQuery = "SELECT * FROM permission WHERE status = 'active' ORDER BY role ASC";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, con);
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, con);
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     listView1.Items.Clear();
 
@@ -96,7 +95,7 @@ namespace ChiuMartSAIS2.App
 
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -111,7 +110,7 @@ namespace ChiuMartSAIS2.App
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sqlQuery = "INSERT INTO permission(role, products, categories, units, suppliers, clients, users, permission, ";
@@ -119,7 +118,7 @@ namespace ChiuMartSAIS2.App
                     sqlQuery += "VALUES(@role, @products, @categories, @units, @suppliers, @clients, @users, @permissions, ";
                     sqlQuery += "@pos, @inventorymonitoring, @purchaseorder, @chequemonitoring, @inventoryreport, @salesreport, @usersreport, @logsreport, @clientreport, @supplierreport, @systemutilities, 'active') ";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, con);
                     sqlCmd.Parameters.AddWithValue("role", role);
                     sqlCmd.Parameters.AddWithValue("products", products);
                     sqlCmd.Parameters.AddWithValue("categories", categories);
@@ -145,7 +144,7 @@ namespace ChiuMartSAIS2.App
                     MessageBox.Show(this, "Permission successfully added", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -159,14 +158,14 @@ namespace ChiuMartSAIS2.App
         {
             //try
             //{
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sqlQuery = "UPDATE permission SET role = @role, products = @products, categories = @categories, units = @units, suppliers = @suppliers, clients = @clients, users = @users, permission = @permissions, ";
                     sqlQuery += "pos = @pos, inventorymonitoring = @inventorymonitoring, purchaseorder = @purchaseorder, chequemonitoring = @chequemonitoring, inventoryreport = @inventoryreport, salesreport = @salesreport, usersreport = @usersreport, logsreport = @logsreport, clientreport = @clientreport, supplierreport = @supplierreport, systemutilities = @systemutilities";
                     sqlQuery += " WHERE permissionId = @crit";
                     
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, con);
                     sqlCmd.Parameters.AddWithValue("role", role);
                     sqlCmd.Parameters.AddWithValue("products", products);
                     sqlCmd.Parameters.AddWithValue("categories", categories);
@@ -193,7 +192,7 @@ namespace ChiuMartSAIS2.App
                 MessageBox.Show(this, "Permission successfully updated", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             /*}
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -207,11 +206,11 @@ namespace ChiuMartSAIS2.App
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sqlQuery = "UPDATE permission SET status = 'inactive' WHERE permissionId = @crit";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, con);
                     sqlCmd.Parameters.AddWithValue("crit", permissionId);
 
                     sqlCmd.ExecuteNonQuery();
@@ -219,7 +218,7 @@ namespace ChiuMartSAIS2.App
                     MessageBox.Show(this, "Permission successfully deleted", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

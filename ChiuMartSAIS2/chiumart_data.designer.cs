@@ -9348,9 +9348,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `basyo` WHERE ((`id` = @p1) AND (`transId` = @p2) AND (`clientId` = @" +
-                "p3) AND (`basyoTransCount` = @p4) AND (`basyoYellowCount` = @p5) AND (`basyoTran" +
-                "sReturned` = @p6) AND (`basyoYellowReturned` = @p7))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM basyo WHERE ((id = @p1) AND (transId = @p2) AND (clientId = @" +
+                "p3) AND (basyoTransCount = @p4) AND (basyoYellowCount = @p5) AND (basyoTran" +
+                "sReturned = @p6) AND (basyoYellowReturned = @p7))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -9410,8 +9410,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `basyo` (`transId`, `clientId`, `basyoTransCount`, `basyoYellowCount`" +
-                ", `basyoTransReturned`, `basyoYellowReturned`) VALUES (@p1, @p2, @p3, @p4, @p5, " +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO basyo (transId, clientId, basyoTransCount, basyoYellowCount" +
+                ", basyoTransReturned, basyoYellowReturned) VALUES (@p1, @p2, @p3, @p4, @p5, " +
                 "@p6)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -9458,7 +9458,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `basyo` SET `transId` = @p1, `clientId` = @p2, `basyoTransCount` = @p3, `basyoYellowCount` = @p4, `basyoTransReturned` = @p5, `basyoYellowReturned` = @p6 WHERE ((`id` = @p7) AND (`transId` = @p8) AND (`clientId` = @p9) AND (`basyoTransCount` = @p10) AND (`basyoYellowCount` = @p11) AND (`basyoTransReturned` = @p12) AND (`basyoYellowReturned` = @p13))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE basyo SET transId = @p1, clientId = @p2, basyoTransCount = @p3, basyoYellowCount = @p4, basyoTransReturned = @p5, basyoYellowReturned = @p6 WHERE ((id = @p7) AND (transId = @p8) AND (clientId = @p9) AND (basyoTransCount = @p10) AND (basyoYellowCount = @p11) AND (basyoTransReturned = @p12) AND (basyoYellowReturned = @p13))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -9573,8 +9573,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `id`, `transId`, `clientId`, `basyoTransCount`, `basyoYellowCount`, `basyo" +
-                "TransReturned`, `basyoYellowReturned` FROM `basyo`";
+            this._commandCollection[0].CommandText = "SELECT id, transId, clientId, basyoTransCount, basyoYellowCount, basyo" +
+                "TransReturned, basyoYellowReturned FROM basyo";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9853,9 +9853,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `user` WHERE ((`userId` = @p1) AND (`username` = @p2) AND (`password`" +
-                " = @p3) AND (`fullname` = @p4) AND (`permissionId` = @p5) AND (`created_date` = " +
-                "@p6) AND (`updated_date` = @p7) AND (`status` = @p8))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM user WHERE ((userId = @p1) AND (username = @p2) AND (password" +
+                " = @p3) AND (fullname = @p4) AND (permissionId = @p5) AND (created_date = " +
+                "@p6) AND (updated_date = @p7) AND (status = @p8))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -9923,8 +9923,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `user` (`username`, `password`, `fullname`, `permissionId`, `created_" +
-                "date`, `updated_date`, `status`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO user (username, password, fullname, permissionId, created_" +
+                "date, updated_date, status) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -9977,7 +9977,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `user` SET `username` = @p1, `password` = @p2, `fullname` = @p3, `permissionId` = @p4, `created_date` = @p5, `updated_date` = @p6, `status` = @p7 WHERE ((`userId` = @p8) AND (`username` = @p9) AND (`password` = @p10) AND (`fullname` = @p11) AND (`permissionId` = @p12) AND (`created_date` = @p13) AND (`updated_date` = @p14) AND (`status` = @p15))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE user SET username = @p1, password = @p2, fullname = @p3, permissionId = @p4, created_date = @p5, updated_date = @p6, status = @p7 WHERE ((userId = @p8) AND (username = @p9) AND (password = @p10) AND (fullname = @p11) AND (permissionId = @p12) AND (created_date = @p13) AND (updated_date = @p14) AND (status = @p15))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -10107,8 +10107,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `userId`, `username`, `password`, `fullname`, `permissionId`, `created_dat" +
-                "e`, `updated_date`, `status` FROM `user`";
+            this._commandCollection[0].CommandText = "SELECT userId, username, password, fullname, permissionId, created_dat" +
+                "e, updated_date, status FROM user";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10468,8 +10468,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `category` WHERE ((`categoryId` = @p1) AND (`categoryName` = @p2) AND" +
-                " (`created_date` = @p3) AND (`updated_date` = @p4) AND (`status` = @p5))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM category WHERE ((categoryId = @p1) AND (categoryName = @p2) AND" +
+                " (created_date = @p3) AND (updated_date = @p4) AND (status = @p5))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -10513,7 +10513,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `category` (`categoryName`, `created_date`, `updated_date`, `status`)" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO category (categoryName, created_date, updated_date, status)" +
                 " VALUES (@p1, @p2, @p3, @p4)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -10546,9 +10546,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `category` SET `categoryName` = @p1, `created_date` = @p2, `updated_date` " +
-                "= @p3, `status` = @p4 WHERE ((`categoryId` = @p5) AND (`categoryName` = @p6) AND" +
-                " (`created_date` = @p7) AND (`updated_date` = @p8) AND (`status` = @p9))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE category SET categoryName = @p1, created_date = @p2, updated_date " +
+                "= @p3, status = @p4 WHERE ((categoryId = @p5) AND (categoryName = @p6) AND" +
+                " (created_date = @p7) AND (updated_date = @p8) AND (status = @p9))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -10633,8 +10633,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `categoryId`, `categoryName`, `created_date`, `updated_date`, `status` FRO" +
-                "M `category`";
+            this._commandCollection[0].CommandText = "SELECT categoryId, categoryName, created_date, updated_date, status FRO" +
+                "M category";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10946,9 +10946,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `cheque` WHERE ((`id` = @p1) AND (`chequeNo` = @p2) AND (`chequeName`" +
-                " = @p3) AND (`chequeBank` = @p4) AND (`chequeBranch` = @p5) AND (`chequeAmount` " +
-                "= @p6) AND (`chequeDate` = @p7) AND (`chequeStatus` = @p8) AND (`status` = @p9))" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM cheque WHERE ((id = @p1) AND (chequeNo = @p2) AND (chequeName" +
+                " = @p3) AND (chequeBank = @p4) AND (chequeBranch = @p5) AND (chequeAmount " +
+                "= @p6) AND (chequeDate = @p7) AND (chequeStatus = @p8) AND (status = @p9))" +
                 "";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -11025,8 +11025,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `cheque` (`chequeNo`, `chequeName`, `chequeBank`, `chequeBranch`, `ch" +
-                "equeAmount`, `chequeDate`, `chequeStatus`, `status`) VALUES (@p1, @p2, @p3, @p4," +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO cheque (chequeNo, chequeName, chequeBank, chequeBranch, ch" +
+                "equeAmount, chequeDate, chequeStatus, status) VALUES (@p1, @p2, @p3, @p4," +
                 " @p5, @p6, @p7, @p8)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -11087,7 +11087,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `cheque` SET `chequeNo` = @p1, `chequeName` = @p2, `chequeBank` = @p3, `chequeBranch` = @p4, `chequeAmount` = @p5, `chequeDate` = @p6, `chequeStatus` = @p7, `status` = @p8 WHERE ((`id` = @p9) AND (`chequeNo` = @p10) AND (`chequeName` = @p11) AND (`chequeBank` = @p12) AND (`chequeBranch` = @p13) AND (`chequeAmount` = @p14) AND (`chequeDate` = @p15) AND (`chequeStatus` = @p16) AND (`status` = @p17))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE cheque SET chequeNo = @p1, chequeName = @p2, chequeBank = @p3, chequeBranch = @p4, chequeAmount = @p5, chequeDate = @p6, chequeStatus = @p7, status = @p8 WHERE ((id = @p9) AND (chequeNo = @p10) AND (chequeName = @p11) AND (chequeBank = @p12) AND (chequeBranch = @p13) AND (chequeAmount = @p14) AND (chequeDate = @p15) AND (chequeStatus = @p16) AND (status = @p17))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -11232,8 +11232,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `id`, `chequeNo`, `chequeName`, `chequeBank`, `chequeBranch`, `chequeAmoun" +
-                "t`, `chequeDate`, `chequeStatus`, `status` FROM `cheque`";
+            this._commandCollection[0].CommandText = "SELECT id, chequeNo, chequeName, chequeBank, chequeBranch, chequeAmoun" +
+                "t, chequeDate, chequeStatus, status FROM cheque";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11656,9 +11656,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `client` WHERE ((`clientId` = @p1) AND (`clientName` = @p2) AND (`cli" +
-                "entContact` = @p3) AND (`created_date` = @p4) AND (`updated_date` = @p5) AND (`s" +
-                "tatus` = @p6) AND (`clientAddress` = @p7))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM client WHERE ((clientId = @p1) AND (clientName = @p2) AND (cli" +
+                "entContact = @p3) AND (created_date = @p4) AND (updated_date = @p5) AND (s" +
+                "tatus = @p6) AND (clientAddress = @p7))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -11718,8 +11718,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `client` (`clientName`, `clientContact`, `created_date`, `updated_dat" +
-                "e`, `status`, `clientAddress`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO client (clientName, clientContact, created_date, updated_dat" +
+                "e, status, clientAddress) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -11765,7 +11765,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `client` SET `clientName` = @p1, `clientContact` = @p2, `created_date` = @p3, `updated_date` = @p4, `status` = @p5, `clientAddress` = @p6 WHERE ((`clientId` = @p7) AND (`clientName` = @p8) AND (`clientContact` = @p9) AND (`created_date` = @p10) AND (`updated_date` = @p11) AND (`status` = @p12) AND (`clientAddress` = @p13))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE client SET clientName = @p1, clientContact = @p2, created_date = @p3, updated_date = @p4, status = @p5, clientAddress = @p6 WHERE ((clientId = @p7) AND (clientName = @p8) AND (clientContact = @p9) AND (created_date = @p10) AND (updated_date = @p11) AND (status = @p12) AND (clientAddress = @p13))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -11880,8 +11880,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `clientId`, `clientName`, `clientContact`, `created_date`, `updated_date`," +
-                " `status`, `clientAddress` FROM `client`";
+            this._commandCollection[0].CommandText = "SELECT clientId, clientName, clientContact, created_date, updated_date," +
+                " status, clientAddress FROM client";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -12244,7 +12244,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `logs` WHERE ((`id` = @p1) AND (`relationId` = @p2) AND (`clientId` = @p3) AND (`supplierId` = @p4) AND (`username` = @p5) AND (`quantity` = @p6) AND (`unit_id` = @p7) AND (`product_id` = @p8) AND (`price` = @p9) AND (`paymentMethod` = @p10) AND (`log_type` = @p11) AND (`created_date` = @p12))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM logs WHERE ((id = @p1) AND (relationId = @p2) AND (clientId = @p3) AND (supplierId = @p4) AND (username = @p5) AND (quantity = @p6) AND (unit_id = @p7) AND (product_id = @p8) AND (price = @p9) AND (paymentMethod = @p10) AND (log_type = @p11) AND (created_date = @p12))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -12344,8 +12344,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `logs` (`relationId`, `clientId`, `supplierId`, `username`, `quantity" +
-                "`, `unit_id`, `product_id`, `price`, `paymentMethod`, `log_type`, `created_date`" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO logs (relationId, clientId, supplierId, username, quantity" +
+                ", unit_id, product_id, price, paymentMethod, log_type, created_date" +
                 ") VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -12427,7 +12427,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `logs` SET `relationId` = @p1, `clientId` = @p2, `supplierId` = @p3, `username` = @p4, `quantity` = @p5, `unit_id` = @p6, `product_id` = @p7, `price` = @p8, `paymentMethod` = @p9, `log_type` = @p10, `created_date` = @p11 WHERE ((`id` = @p12) AND (`relationId` = @p13) AND (`clientId` = @p14) AND (`supplierId` = @p15) AND (`username` = @p16) AND (`quantity` = @p17) AND (`unit_id` = @p18) AND (`product_id` = @p19) AND (`price` = @p20) AND (`paymentMethod` = @p21) AND (`log_type` = @p22) AND (`created_date` = @p23))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE logs SET relationId = @p1, clientId = @p2, supplierId = @p3, username = @p4, quantity = @p5, unit_id = @p6, product_id = @p7, price = @p8, paymentMethod = @p9, log_type = @p10, created_date = @p11 WHERE ((id = @p12) AND (relationId = @p13) AND (clientId = @p14) AND (supplierId = @p15) AND (username = @p16) AND (quantity = @p17) AND (unit_id = @p18) AND (product_id = @p19) AND (price = @p20) AND (paymentMethod = @p21) AND (log_type = @p22) AND (created_date = @p23))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -12617,9 +12617,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `id`, `relationId`, `clientId`, `supplierId`, `username`, `quantity`, `uni" +
-                "t_id`, `product_id`, `price`, `paymentMethod`, `log_type`, `created_date` FROM `" +
-                "logs`";
+            this._commandCollection[0].CommandText = "SELECT id, relationId, clientId, supplierId, username, quantity, uni" +
+                "t_id, product_id, price, paymentMethod, log_type, created_date FROM " +
+                "logs";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -12995,7 +12995,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `or` WHERE ((`id` = @p1) AND (`ornumber` = @p2))";
+            this._adapter.DeleteCommand.CommandText = "DELETE from [or] WHERE ((id = @p1) AND (ornumber = @p2))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -13015,7 +13015,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `or` (`ornumber`) VALUES (@p1)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO or (ornumber) VALUES (@p1)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -13026,7 +13026,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `or` SET `ornumber` = @p1 WHERE ((`id` = @p2) AND (`ornumber` = @p3))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE or SET ornumber = @p1 WHERE ((id = @p2) AND (ornumber = @p3))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -13066,7 +13066,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `id`, `ornumber` FROM `or`";
+            this._commandCollection[0].CommandText = "SELECT id, ornumber FROM or";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -13340,7 +13340,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `permission` WHERE ((`permissionId` = @p1) AND (`role` = @p2) AND (`products` = @p3) AND (`categories` = @p4) AND (`units` = @p5) AND (`suppliers` = @p6) AND (`permission` = @p7) AND (`clients` = @p8) AND (`users` = @p9) AND (`pos` = @p10) AND (`inventorymonitoring` = @p11) AND (`purchaseorder` = @p12) AND (`chequemonitoring` = @p13) AND (`inventoryreport` = @p14) AND (`salesreport` = @p15) AND (`usersreport` = @p16) AND (`logsreport` = @p17) AND (`clientreport` = @p18) AND (`supplierreport` = @p19) AND (`systemutilities` = @p20) AND (`created_date` = @p21) AND (`updated_date` = @p22) AND (`status` = @p23))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM permission WHERE ((permissionId = @p1) AND (role = @p2) AND (products = @p3) AND (categories = @p4) AND (units = @p5) AND (suppliers = @p6) AND (permission = @p7) AND (clients = @p8) AND (users = @p9) AND (pos = @p10) AND (inventorymonitoring = @p11) AND (purchaseorder = @p12) AND (chequemonitoring = @p13) AND (inventoryreport = @p14) AND (salesreport = @p15) AND (usersreport = @p16) AND (logsreport = @p17) AND (clientreport = @p18) AND (supplierreport = @p19) AND (systemutilities = @p20) AND (created_date = @p21) AND (updated_date = @p22) AND (status = @p23))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -13528,7 +13528,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `permission` (`role`, `products`, `categories`, `units`, `suppliers`, `permission`, `clients`, `users`, `pos`, `inventorymonitoring`, `purchaseorder`, `chequemonitoring`, `inventoryreport`, `salesreport`, `usersreport`, `logsreport`, `clientreport`, `supplierreport`, `systemutilities`, `created_date`, `updated_date`, `status`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO permission (role, products, categories, units, suppliers, permission, clients, users, pos, inventorymonitoring, purchaseorder, chequemonitoring, inventoryreport, salesreport, usersreport, logsreport, clientreport, supplierreport, systemutilities, created_date, updated_date, status) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -13686,7 +13686,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `permission` SET `role` = @p1, `products` = @p2, `categories` = @p3, `units` = @p4, `suppliers` = @p5, `permission` = @p6, `clients` = @p7, `users` = @p8, `pos` = @p9, `inventorymonitoring` = @p10, `purchaseorder` = @p11, `chequemonitoring` = @p12, `inventoryreport` = @p13, `salesreport` = @p14, `usersreport` = @p15, `logsreport` = @p16, `clientreport` = @p17, `supplierreport` = @p18, `systemutilities` = @p19, `created_date` = @p20, `updated_date` = @p21, `status` = @p22 WHERE ((`permissionId` = @p23) AND (`role` = @p24) AND (`products` = @p25) AND (`categories` = @p26) AND (`units` = @p27) AND (`suppliers` = @p28) AND (`permission` = @p29) AND (`clients` = @p30) AND (`users` = @p31) AND (`pos` = @p32) AND (`inventorymonitoring` = @p33) AND (`purchaseorder` = @p34) AND (`chequemonitoring` = @p35) AND (`inventoryreport` = @p36) AND (`salesreport` = @p37) AND (`usersreport` = @p38) AND (`logsreport` = @p39) AND (`clientreport` = @p40) AND (`supplierreport` = @p41) AND (`systemutilities` = @p42) AND (`created_date` = @p43) AND (`updated_date` = @p44) AND (`status` = @p45))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE permission SET role = @p1, products = @p2, categories = @p3, units = @p4, suppliers = @p5, permission = @p6, clients = @p7, users = @p8, pos = @p9, inventorymonitoring = @p10, purchaseorder = @p11, chequemonitoring = @p12, inventoryreport = @p13, salesreport = @p14, usersreport = @p15, logsreport = @p16, clientreport = @p17, supplierreport = @p18, systemutilities = @p19, created_date = @p20, updated_date = @p21, status = @p22 WHERE ((permissionId = @p23) AND (role = @p24) AND (products = @p25) AND (categories = @p26) AND (units = @p27) AND (suppliers = @p28) AND (permission = @p29) AND (clients = @p30) AND (users = @p31) AND (pos = @p32) AND (inventorymonitoring = @p33) AND (purchaseorder = @p34) AND (chequemonitoring = @p35) AND (inventoryreport = @p36) AND (salesreport = @p37) AND (usersreport = @p38) AND (logsreport = @p39) AND (clientreport = @p40) AND (supplierreport = @p41) AND (systemutilities = @p42) AND (created_date = @p43) AND (updated_date = @p44) AND (status = @p45))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -14041,7 +14041,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT `permissionId`, `role`, `products`, `categories`, `units`, `suppliers`, `permission`, `clients`, `users`, `pos`, `inventorymonitoring`, `purchaseorder`, `chequemonitoring`, `inventoryreport`, `salesreport`, `usersreport`, `logsreport`, `clientreport`, `supplierreport`, `systemutilities`, `created_date`, `updated_date`, `status` FROM `permission`";
+            this._commandCollection[0].CommandText = @"SELECT permissionId, role, products, categories, units, suppliers, permission, clients, users, pos, inventorymonitoring, purchaseorder, chequemonitoring, inventoryreport, salesreport, usersreport, logsreport, clientreport, supplierreport, systemutilities, created_date, updated_date, status FROM permission";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -14516,9 +14516,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `po` WHERE ((`id` = @p1) AND (`poId` = @p2) AND (`productId` = @p3) A" +
-                "ND (`supplierId` = @p4) AND (`poDate` = @p5) AND (`qty` = @p6) AND (`unitId` = @" +
-                "p7) AND (`poStatus` = @p8) AND (`status` = @p9) AND (`oldPrice` = @p10))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM po WHERE ((id = @p1) AND (poId = @p2) AND (productId = @p3) A" +
+                "ND (supplierId = @p4) AND (poDate = @p5) AND (qty = @p6) AND (unitId = @" +
+                "p7) AND (poStatus = @p8) AND (status = @p9) AND (oldPrice = @p10))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -14602,8 +14602,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `po` (`poId`, `productId`, `supplierId`, `poDate`, `qty`, `unitId`, `" +
-                "poStatus`, `status`, `oldPrice`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8," +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO po (poId, productId, supplierId, poDate, qty, unitId, " +
+                "poStatus, status, oldPrice) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8," +
                 " @p9)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -14671,7 +14671,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `po` SET `poId` = @p1, `productId` = @p2, `supplierId` = @p3, `poDate` = @p4, `qty` = @p5, `unitId` = @p6, `poStatus` = @p7, `status` = @p8, `oldPrice` = @p9 WHERE ((`id` = @p10) AND (`poId` = @p11) AND (`productId` = @p12) AND (`supplierId` = @p13) AND (`poDate` = @p14) AND (`qty` = @p15) AND (`unitId` = @p16) AND (`poStatus` = @p17) AND (`status` = @p18) AND (`oldPrice` = @p19))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE po SET poId = @p1, productId = @p2, supplierId = @p3, poDate = @p4, qty = @p5, unitId = @p6, poStatus = @p7, status = @p8, oldPrice = @p9 WHERE ((id = @p10) AND (poId = @p11) AND (productId = @p12) AND (supplierId = @p13) AND (poDate = @p14) AND (qty = @p15) AND (unitId = @p16) AND (poStatus = @p17) AND (status = @p18) AND (oldPrice = @p19))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -14831,8 +14831,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `id`, `poId`, `productId`, `supplierId`, `poDate`, `qty`, `unitId`, `poSta" +
-                "tus`, `status`, `oldPrice` FROM `po`";
+            this._commandCollection[0].CommandText = "SELECT id, poId, productId, supplierId, poDate, qty, unitId, poSta" +
+                "tus, status, oldPrice FROM po";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15198,8 +15198,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `po_queue` WHERE ((`id` = @p1) AND (`product_id` = @p2) AND (`supplie" +
-                "r_price` = @p3) AND (`stock` = @p4))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM po_queue WHERE ((id = @p1) AND (product_id = @p2) AND (supplie" +
+                "r_price = @p3) AND (stock = @p4))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -15235,7 +15235,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `po_queue` (`product_id`, `supplier_price`, `stock`) VALUES (@p1, @p2" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO po_queue (product_id, supplier_price, stock) VALUES (@p1, @p2" +
                 ", @p3)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -15261,9 +15261,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `po_queue` SET `product_id` = @p1, `supplier_price` = @p2, `stock` = @p3 W" +
-                "HERE ((`id` = @p4) AND (`product_id` = @p5) AND (`supplier_price` = @p6) AND (`s" +
-                "tock` = @p7))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE po_queue SET product_id = @p1, supplier_price = @p2, stock = @p3 W" +
+                "HERE ((id = @p4) AND (product_id = @p5) AND (supplier_price = @p6) AND (s" +
+                "tock = @p7))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -15333,7 +15333,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `id`, `product_id`, `supplier_price`, `stock` FROM `po_queue`";
+            this._commandCollection[0].CommandText = "SELECT id, product_id, supplier_price, stock FROM po_queue";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15603,7 +15603,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `products` WHERE ((`productId` = @p1) AND (`productName` = @p2) AND (`categoryId` = @p3) AND (`productPrice` = @p4) AND (`unitId` = @p5) AND (`supplierPrice` = @p6) AND (`productStock` = @p7) AND (`productSafetyStock` = @p8) AND (`created_time` = @p9) AND (`updated_time` = @p10) AND (`status` = @p11))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM products WHERE ((productId = @p1) AND (productName = @p2) AND (categoryId = @p3) AND (productPrice = @p4) AND (unitId = @p5) AND (supplierPrice = @p6) AND (productStock = @p7) AND (productSafetyStock = @p8) AND (created_time = @p9) AND (updated_time = @p10) AND (status = @p11))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -15695,9 +15695,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `products` (`productName`, `categoryId`, `productPrice`, `unitId`, `s" +
-                "upplierPrice`, `productStock`, `productSafetyStock`, `created_time`, `updated_ti" +
-                "me`, `status`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO products (productName, categoryId, productPrice, unitId, s" +
+                "upplierPrice, productStock, productSafetyStock, created_time, updated_ti" +
+                "me, status) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -15771,7 +15771,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `products` SET `productName` = @p1, `categoryId` = @p2, `productPrice` = @p3, `unitId` = @p4, `supplierPrice` = @p5, `productStock` = @p6, `productSafetyStock` = @p7, `created_time` = @p8, `updated_time` = @p9, `status` = @p10 WHERE ((`productId` = @p11) AND (`productName` = @p12) AND (`categoryId` = @p13) AND (`productPrice` = @p14) AND (`unitId` = @p15) AND (`supplierPrice` = @p16) AND (`productStock` = @p17) AND (`productSafetyStock` = @p18) AND (`created_time` = @p19) AND (`updated_time` = @p20) AND (`status` = @p21))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE products SET productName = @p1, categoryId = @p2, productPrice = @p3, unitId = @p4, supplierPrice = @p5, productStock = @p6, productSafetyStock = @p7, created_time = @p8, updated_time = @p9, status = @p10 WHERE ((productId = @p11) AND (productName = @p12) AND (categoryId = @p13) AND (productPrice = @p14) AND (unitId = @p15) AND (supplierPrice = @p16) AND (productStock = @p17) AND (productSafetyStock = @p18) AND (created_time = @p19) AND (updated_time = @p20) AND (status = @p21))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -15946,9 +15946,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `productId`, `productName`, `categoryId`, `productPrice`, `unitId`, `suppl" +
-                "ierPrice`, `productStock`, `productSafetyStock`, `created_time`, `updated_time`," +
-                " `status` FROM `products`";
+            this._commandCollection[0].CommandText = "SELECT productId, productName, categoryId, productPrice, unitId, suppl" +
+                "ierPrice, productStock, productSafetyStock, created_time, updated_time," +
+                " status FROM products";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -16302,8 +16302,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `purchaseorder` WHERE ((`poId` = @p1) AND (`supplierId` = @p2) AND (`" +
-                "productId` = @p3) AND (`status` = @p4) AND (`dateArrival` = @p5) AND (`qty` = @p" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM purchaseorder WHERE ((poId = @p1) AND (supplierId = @p2) AND (" +
+                "productId = @p3) AND (status = @p4) AND (dateArrival = @p5) AND (qty = @p" +
                 "6))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -16356,8 +16356,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `purchaseorder` (`supplierId`, `productId`, `status`, `dateArrival`, " +
-                "`qty`) VALUES (@p1, @p2, @p3, @p4, @p5)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO purchaseorder (supplierId, productId, status, dateArrival, " +
+                "qty) VALUES (@p1, @p2, @p3, @p4, @p5)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -16396,10 +16396,10 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `purchaseorder` SET `supplierId` = @p1, `productId` = @p2, `status` = @p3," +
-                " `dateArrival` = @p4, `qty` = @p5 WHERE ((`poId` = @p6) AND (`supplierId` = @p7)" +
-                " AND (`productId` = @p8) AND (`status` = @p9) AND (`dateArrival` = @p10) AND (`q" +
-                "ty` = @p11))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE purchaseorder SET supplierId = @p1, productId = @p2, status = @p3," +
+                " dateArrival = @p4, qty = @p5 WHERE ((poId = @p6) AND (supplierId = @p7)" +
+                " AND (productId = @p8) AND (status = @p9) AND (dateArrival = @p10) AND (q" +
+                "ty = @p11))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -16499,8 +16499,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `poId`, `supplierId`, `productId`, `status`, `dateArrival`, `qty` FROM `pu" +
-                "rchaseorder`";
+            this._commandCollection[0].CommandText = "SELECT poId, supplierId, productId, status, dateArrival, qty FROM pu" +
+                "rchaseorder";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -16795,9 +16795,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `supplier` WHERE ((`supplierId` = @p1) AND (`supplierName` = @p2) AND" +
-                " (`supplierContact` = @p3) AND (`supplierContactPerson` = @p4) AND (`created_dat" +
-                "e` = @p5) AND (`updated_date` = @p6) AND (`status` = @p7) AND (`supplierAddress`" +
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM supplier WHERE ((supplierId = @p1) AND (supplierName = @p2) AND" +
+                " (supplierContact = @p3) AND (supplierContactPerson = @p4) AND (created_dat" +
+                "e = @p5) AND (updated_date = @p6) AND (status = @p7) AND (supplierAddress" +
                 " = @p8))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -16866,8 +16866,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `supplier` (`supplierName`, `supplierContact`, `supplierContactPerson" +
-                "`, `created_date`, `updated_date`, `status`, `supplierAddress`) VALUES (@p1, @p2" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO supplier (supplierName, supplierContact, supplierContactPerson" +
+                ", created_date, updated_date, status, supplierAddress) VALUES (@p1, @p2" +
                 ", @p3, @p4, @p5, @p6, @p7)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -16921,7 +16921,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `supplier` SET `supplierName` = @p1, `supplierContact` = @p2, `supplierContactPerson` = @p3, `created_date` = @p4, `updated_date` = @p5, `status` = @p6, `supplierAddress` = @p7 WHERE ((`supplierId` = @p8) AND (`supplierName` = @p9) AND (`supplierContact` = @p10) AND (`supplierContactPerson` = @p11) AND (`created_date` = @p12) AND (`updated_date` = @p13) AND (`status` = @p14) AND (`supplierAddress` = @p15))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE supplier SET supplierName = @p1, supplierContact = @p2, supplierContactPerson = @p3, created_date = @p4, updated_date = @p5, status = @p6, supplierAddress = @p7 WHERE ((supplierId = @p8) AND (supplierName = @p9) AND (supplierContact = @p10) AND (supplierContactPerson = @p11) AND (created_date = @p12) AND (updated_date = @p13) AND (status = @p14) AND (supplierAddress = @p15))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -17051,8 +17051,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `supplierId`, `supplierName`, `supplierContact`, `supplierContactPerson`, " +
-                "`created_date`, `updated_date`, `status`, `supplierAddress` FROM `supplier`";
+            this._commandCollection[0].CommandText = "SELECT supplierId, supplierName, supplierContact, supplierContactPerson, " +
+                "created_date, updated_date, status, supplierAddress FROM supplier";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -17441,7 +17441,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `transaction` WHERE ((`transId` = @p1) AND (`orNo` = @p2) AND (`productId` = @p3) AND (`clientId` = @p4) AND (`paymentMethod` = @p5) AND (`transDate` = @p6) AND (`transStatus` = @p7) AND (`qty` = @p8) AND (`unitId` = @p9) AND (`supplierPrice` = @p10) AND (`unitPrice` = @p11) AND (`paidBalance` = @p12) AND (`yellowBasyoReturned` = @p13) AND (`transparentBasyoReturned` = @p14))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM transaction WHERE ((transId = @p1) AND (orNo = @p2) AND (productId = @p3) AND (clientId = @p4) AND (paymentMethod = @p5) AND (transDate = @p6) AND (transStatus = @p7) AND (qty = @p8) AND (unitId = @p9) AND (supplierPrice = @p10) AND (unitPrice = @p11) AND (paidBalance = @p12) AND (yellowBasyoReturned = @p13) AND (transparentBasyoReturned = @p14))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -17557,7 +17557,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `transaction` (`orNo`, `productId`, `clientId`, `paymentMethod`, `transDate`, `transStatus`, `qty`, `unitId`, `supplierPrice`, `unitPrice`, `paidBalance`, `yellowBasyoReturned`, `transparentBasyoReturned`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO transaction (orNo, productId, clientId, paymentMethod, transDate, transStatus, qty, unitId, supplierPrice, unitPrice, paidBalance, yellowBasyoReturned, transparentBasyoReturned) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -17652,7 +17652,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `transaction` SET `orNo` = @p1, `productId` = @p2, `clientId` = @p3, `paymentMethod` = @p4, `transDate` = @p5, `transStatus` = @p6, `qty` = @p7, `unitId` = @p8, `supplierPrice` = @p9, `unitPrice` = @p10, `paidBalance` = @p11, `yellowBasyoReturned` = @p12, `transparentBasyoReturned` = @p13 WHERE ((`transId` = @p14) AND (`orNo` = @p15) AND (`productId` = @p16) AND (`clientId` = @p17) AND (`paymentMethod` = @p18) AND (`transDate` = @p19) AND (`transStatus` = @p20) AND (`qty` = @p21) AND (`unitId` = @p22) AND (`supplierPrice` = @p23) AND (`unitPrice` = @p24) AND (`paidBalance` = @p25) AND (`yellowBasyoReturned` = @p26) AND (`transparentBasyoReturned` = @p27))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE transaction SET orNo = @p1, productId = @p2, clientId = @p3, paymentMethod = @p4, transDate = @p5, transStatus = @p6, qty = @p7, unitId = @p8, supplierPrice = @p9, unitPrice = @p10, paidBalance = @p11, yellowBasyoReturned = @p12, transparentBasyoReturned = @p13 WHERE ((transId = @p14) AND (orNo = @p15) AND (productId = @p16) AND (clientId = @p17) AND (paymentMethod = @p18) AND (transDate = @p19) AND (transStatus = @p20) AND (qty = @p21) AND (unitId = @p22) AND (supplierPrice = @p23) AND (unitPrice = @p24) AND (paidBalance = @p25) AND (yellowBasyoReturned = @p26) AND (transparentBasyoReturned = @p27))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -17872,9 +17872,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `transId`, `orNo`, `productId`, `clientId`, `paymentMethod`, `transDate`, " +
-                "`transStatus`, `qty`, `unitId`, `supplierPrice`, `unitPrice`, `paidBalance`, `ye" +
-                "llowBasyoReturned`, `transparentBasyoReturned` FROM `transaction`";
+            this._commandCollection[0].CommandText = "SELECT transId, orNo, productId, clientId, paymentMethod, transDate, " +
+                "transStatus, qty, unitId, supplierPrice, unitPrice, paidBalance, ye" +
+                "llowBasyoReturned, transparentBasyoReturned FROM transaction";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -18265,8 +18265,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `units` WHERE ((`unitId` = @p1) AND (`unitDesc` = @p2) AND (`created_" +
-                "date` = @p3) AND (`updated_date` = @p4) AND (`status` = @p5))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM units WHERE ((unitId = @p1) AND (unitDesc = @p2) AND (created_" +
+                "date = @p3) AND (updated_date = @p4) AND (status = @p5))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -18310,7 +18310,7 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `units` (`unitDesc`, `created_date`, `updated_date`, `status`) VALUES" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO units (unitDesc, created_date, updated_date, status) VALUES" +
                 " (@p1, @p2, @p3, @p4)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -18343,9 +18343,9 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `units` SET `unitDesc` = @p1, `created_date` = @p2, `updated_date` = @p3, " +
-                "`status` = @p4 WHERE ((`unitId` = @p5) AND (`unitDesc` = @p6) AND (`created_date" +
-                "` = @p7) AND (`updated_date` = @p8) AND (`status` = @p9))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE units SET unitDesc = @p1, created_date = @p2, updated_date = @p3, " +
+                "status = @p4 WHERE ((unitId = @p5) AND (unitDesc = @p6) AND (created_date" +
+                " = @p7) AND (updated_date = @p8) AND (status = @p9))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -18430,8 +18430,8 @@ namespace ChiuMartSAIS2.chiumart_dataTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `unitId`, `unitDesc`, `created_date`, `updated_date`, `status` FROM `units" +
-                "`";
+            this._commandCollection[0].CommandText = "SELECT unitId, unitDesc, created_date, updated_date, status FROM units" +
+                "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

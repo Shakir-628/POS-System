@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using MySql.Data.MySqlClient;
+
 using ChiuMartSAIS2.Classes;
+using System.Data.SqlClient;
 
 namespace ChiuMartSAIS2.App
 {
@@ -27,17 +28,17 @@ namespace ChiuMartSAIS2.App
 
         private void populateCheques()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT * FROM cheque WHERE status = @status AND chequeStatus != 'Verified' ORDER BY chequeName ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstCheques.Items.Clear();
 
@@ -60,7 +61,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -73,18 +74,18 @@ namespace ChiuMartSAIS2.App
         /// </summary>
         private void searchCheque(string criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT * FROM cheque WHERE chequeName LIKE @criteria AND status = @status";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("status", this.status);
                     sqlCmd.Parameters.AddWithValue("criteria", "%" + criteria + "%");
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstCheques.Items.Clear();
 
@@ -107,7 +108,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -120,7 +121,7 @@ namespace ChiuMartSAIS2.App
         /// </summary>
         private void getChequeByDateProcessing(string stockLevel)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -140,10 +141,10 @@ namespace ChiuMartSAIS2.App
                         sqlQuery = "SELECT * FROM cheque WHERE chequeStatus = 'Verified' AND status = @status ORDER BY chequeName ASC";
                     }
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstCheques.Items.Clear();
 
@@ -166,7 +167,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -281,11 +282,11 @@ namespace ChiuMartSAIS2.App
         {
             try
             {
-                using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection Con = new SqlConnection(conf.connectionstring))
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE cheque SET status = 'inactive' WHERE id = @crit";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("crit", crit);
 
                     sqlCmd.ExecuteNonQuery();
@@ -293,7 +294,7 @@ namespace ChiuMartSAIS2.App
                     MessageBox.Show(this, "Cheque successfully deleted", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Can't connect to database ", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -303,11 +304,11 @@ namespace ChiuMartSAIS2.App
         {
             try
             {
-                using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection Con = new SqlConnection(conf.connectionstring))
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE cheque SET status = 'active' WHERE id = @crit";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("crit", crit);
 
                     sqlCmd.ExecuteNonQuery();
@@ -315,7 +316,7 @@ namespace ChiuMartSAIS2.App
                     MessageBox.Show(this, "Cheque successfully restored", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Can't connect to database ", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -326,11 +327,11 @@ namespace ChiuMartSAIS2.App
         {
             try
             {
-                using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection Con = new SqlConnection(conf.connectionstring))
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE cheque SET chequeStatus = 'Verified' WHERE id = @crit";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("crit", crit);
 
                     sqlCmd.ExecuteNonQuery();
@@ -338,7 +339,7 @@ namespace ChiuMartSAIS2.App
                     MessageBox.Show(this, "Cheque successfully verified", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Can't connect to database ", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -33,7 +33,7 @@ namespace ChiuMartSAIS2.Classes
                 objFilestream.Close();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

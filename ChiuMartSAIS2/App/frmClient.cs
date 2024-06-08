@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using MySql.Data.MySqlClient;
+
 
 namespace ChiuMartSAIS2.App
 {
@@ -39,17 +40,17 @@ namespace ChiuMartSAIS2.App
 
         private void populateClient()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT * FROM client WHERE status = @status ORDER BY clientName ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     listView1.Items.Clear();
 
@@ -80,7 +81,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -95,20 +96,20 @@ namespace ChiuMartSAIS2.App
             {
                 return;
             }
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT * FROM client WHERE ( clientName LIKE '%" + critera + "%' or clientContact = @crit) AND status = @status ORDER BY clientName ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     // SQL Query Parameters
                     sqlCmd.Parameters.AddWithValue("crit", "%" + critera + "%");
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     listView1.Items.Clear();
 
@@ -142,7 +143,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -152,13 +153,13 @@ namespace ChiuMartSAIS2.App
 
         private void insertClient(string clientName, string clientAddress, string clientContact, string NIC, string guranteeDetails, string otherDetails, string cateogoryType)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "INSERT INTO client (clientName, clientAddress, clientContact, status,NIC,guranteeDetails,otherDetails,categoryType) VALUES (@clientName, @clientAddress, @clientContact, 'active',@NIC,@guranteeDetails,@otherDetails,@categoryType)";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("clientName", clientName);
                     sqlCmd.Parameters.AddWithValue("clientAddress", clientAddress);
@@ -177,7 +178,7 @@ namespace ChiuMartSAIS2.App
                     objHelper.backupinset(sqlCmd, "INSERT", "client");
                     MessageBox.Show(this, "Client successfully added", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Adding new Client error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -187,13 +188,13 @@ namespace ChiuMartSAIS2.App
         ChiuMartSAIS2.Classes.dbHelper objHelper = new ChiuMartSAIS2.Classes.dbHelper();
         private void updateClient(string clientName, string clientAddress, string clientContact, int criteria, string NIC, string guranteeDetails, string otherDetails, string cateogoryType)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE client SET clientName=@clientName, clientAddress=@clientAddress, clientContact=@clientContact,NIC=@nic,guranteeDetails=@guranteeDetails,otherDetails =@otherDetails,categoryType=@categoryType WHERE clientId=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("clientName", clientName);
                     sqlCmd.Parameters.AddWithValue("clientAddress", clientAddress);
@@ -212,7 +213,7 @@ namespace ChiuMartSAIS2.App
 
                     MessageBox.Show(this, "Client successfully updated", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Updating new Client error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -222,13 +223,13 @@ namespace ChiuMartSAIS2.App
 
         private void deleteClient(int criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE client SET status='inactive' WHERE clientId=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
 
@@ -236,7 +237,7 @@ namespace ChiuMartSAIS2.App
                     objHelper.backupinset(sqlCmd, "UPDATE", "client");
                     MessageBox.Show(this, "Client successfully deleted", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Deleting client error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -246,13 +247,13 @@ namespace ChiuMartSAIS2.App
 
         private void restoreClient(int criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE client SET status='active' WHERE clientId=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
 
@@ -260,7 +261,7 @@ namespace ChiuMartSAIS2.App
                     objHelper.backupinset(sqlCmd, "UPDATE", "client");
                     MessageBox.Show(this, "Client successfully restored", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Restoring client error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

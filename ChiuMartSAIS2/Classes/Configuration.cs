@@ -9,7 +9,7 @@ namespace ChiuMartSAIS2.Classes
     class Configuration
     {
         //configuration variables
-        private string _cnString = "Server=localhost;Database=lifecare;Uid=lifecare1;Pwd=Ahmed@321;Convert Zero Datetime=true;";
+        private string _cnString = @"data source =MUHAMMADSHAKIRJ; initial catalog=LifeCare; integrated security=True";
 
         //setters and getters
         public string connectionstring

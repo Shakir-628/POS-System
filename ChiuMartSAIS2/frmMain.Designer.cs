@@ -52,6 +52,7 @@
             this.btnTime = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.pnlReports = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnManual = new System.Windows.Forms.Button();
@@ -83,7 +84,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlDatabaseManagement.SuspendLayout();
@@ -104,7 +104,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(10, 5, 5, 5);
-            this.panel1.Size = new System.Drawing.Size(1145, 59);
+            this.panel1.Size = new System.Drawing.Size(1410, 59);
             this.panel1.TabIndex = 0;
             // 
             // button2
@@ -115,7 +115,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(1018, 5);
+            this.button2.Location = new System.Drawing.Point(1283, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(61, 49);
             this.button2.TabIndex = 2;
@@ -131,7 +131,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnExit.Location = new System.Drawing.Point(1079, 5);
+            this.btnExit.Location = new System.Drawing.Point(1344, 5);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(61, 49);
             this.btnExit.TabIndex = 1;
@@ -146,7 +146,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(10, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1130, 49);
+            this.label1.Size = new System.Drawing.Size(1395, 49);
             this.label1.TabIndex = 0;
             this.label1.Text = "New Life Care Pharmacy & Super Store";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,7 +166,7 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(1065, 59);
+            this.panel4.Location = new System.Drawing.Point(1330, 59);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(80, 609);
             this.panel4.TabIndex = 5;
@@ -185,7 +185,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(80, 59);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(985, 609);
+            this.panel3.Size = new System.Drawing.Size(1250, 609);
             this.panel3.TabIndex = 6;
             this.panel3.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.panel3_PreviewKeyDown);
             // 
@@ -445,6 +445,24 @@
             this.pnlReports.Name = "pnlReports";
             this.pnlReports.Size = new System.Drawing.Size(318, 620);
             this.pnlReports.TabIndex = 2;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Teal;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button6.Image = global::ChiuMartSAIS2.Properties.Resources._1400994707_gnome_mime_application_vnd_lotus_1_2_3;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(161, 274);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.button6.Size = new System.Drawing.Size(147, 50);
+            this.button6.TabIndex = 13;
+            this.button6.Text = "Sales Return";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.btnSalesReturnReport_Click);
             // 
             // button5
             // 
@@ -932,18 +950,19 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(80, 646);
+            this.statusStrip1.Location = new System.Drawing.Point(80, 642);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(985, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1250, 26);
             this.statusStrip1.TabIndex = 7;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // timer2
@@ -951,29 +970,11 @@
             this.timer2.Interval = 5000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Teal;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Image = global::ChiuMartSAIS2.Properties.Resources._1400994707_gnome_mime_application_vnd_lotus_1_2_3;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(161, 274);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.button6.Size = new System.Drawing.Size(147, 50);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "Sales Return";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.btnSalesReturnReport_Click);
-            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 668);
+            this.ClientSize = new System.Drawing.Size(1410, 668);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);

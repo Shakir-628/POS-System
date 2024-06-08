@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using MySql.Data.MySqlClient;
+
 using ChiuMartSAIS2.Classes;
+using System.Data.SqlClient;
 
 namespace ChiuMartSAIS2.App.Dialogs
 {
@@ -32,16 +33,16 @@ namespace ChiuMartSAIS2.App.Dialogs
         // for product suggestion
         private void populateProductTextbox()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT p.*, u.*, c.* FROM products as p INNER JOIN units as u ON p.unitId = u.unitId INNER JOIN category as c ON p.categoryId = c.categoryId WHERE p.status = 'active'";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -50,7 +51,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -63,7 +64,7 @@ namespace ChiuMartSAIS2.App.Dialogs
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sql = "";
@@ -78,7 +79,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                         sql = "UPDATE products SET productStock = productStock - @qty WHERE productName = @productName";
                     }
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
                     sqlCmd.Parameters.AddWithValue("qty", qty);
                     sqlCmd.Parameters.AddWithValue("productName", productName);
 
@@ -88,7 +89,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                     //MessageBox.Show("New conversion of products was ma/de successfully", "Conversion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Restoring client error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -102,15 +103,15 @@ namespace ChiuMartSAIS2.App.Dialogs
 
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
-                    string sql = "SELECT productId FROM products WHERE productName = @productName LIMIT 1";
+                    string sql = "SELECT Top 1 productId FROM products WHERE productName = @productName";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
                     sqlCmd.Parameters.AddWithValue("productName", productName);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -118,7 +119,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Restoring client error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -132,15 +133,15 @@ namespace ChiuMartSAIS2.App.Dialogs
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sql = "SELECT * FROM logs WHERE clientId = @id AND log_type = 'Conversion'";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
                     sqlCmd.Parameters.AddWithValue("id", this.id);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -154,7 +155,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Restoring client error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -170,15 +171,15 @@ namespace ChiuMartSAIS2.App.Dialogs
 
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
-                    string sql = "SELECT productName FROM products WHERE productId = @productId LIMIT 1";
+                    string sql = "SELECT top 1 productName FROM products WHERE productId = @productId";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
                     sqlCmd.Parameters.AddWithValue("productId", productId);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -186,7 +187,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Restoring client error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -200,11 +201,11 @@ namespace ChiuMartSAIS2.App.Dialogs
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sql = "INSERT INTO logs(quantity, product_id, relationId, price, clientId, username, log_type) VALUES(@quantity, @product_id, @relationId, @price, @clientId, @username, @log_type)";
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
 
                     sqlCmd.Parameters.AddWithValue("quantity", qty);
                     sqlCmd.Parameters.AddWithValue("product_id", getProductIdByName(productName));
@@ -218,7 +219,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                     new dbHelper().backupinset(sqlCmd, "INSERT", "logs");
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show("Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -231,14 +232,14 @@ namespace ChiuMartSAIS2.App.Dialogs
 
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
-                    string sql = "SELECT id FROM conversion ORDER BY id DESC LIMIT 1";
+                    string sql = "SELECT top 1 id FROM conversion ORDER BY id DESC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -246,7 +247,7 @@ namespace ChiuMartSAIS2.App.Dialogs
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Getting conversion id error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

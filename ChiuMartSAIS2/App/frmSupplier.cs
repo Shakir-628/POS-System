@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using MySql.Data.MySqlClient;
+
 using ChiuMartSAIS2.Classes;
+using System.Data.SqlClient;
 
 namespace ChiuMartSAIS2.App
 {
@@ -37,17 +38,17 @@ namespace ChiuMartSAIS2.App
 
         private void populateSupplier()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT * FROM supplier WHERE status = @status ORDER BY supplierName ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     listView1.Items.Clear();
 
@@ -74,7 +75,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -84,13 +85,13 @@ namespace ChiuMartSAIS2.App
 
         private void insertSupplier(string supplierName, string supplierAddress, string supplierContact, string supplierContactPerson, DateTime supplierDate, string supplierTotalBalance, string supplierRemainingBalance)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "INSERT INTO supplier (supplierName, supplierAddress, supplierContact, supplierContactPerson,DateReminder,TotalBalance,RemainingBalance, status) VALUES (@supplierName, @supplierAddress, @supplierContact, @supplierContactPerson, @DateReminder, @TotalBalance, @RemainingBalance, 'active')";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("supplierName", supplierName);
                     sqlCmd.Parameters.AddWithValue("supplierAddress", supplierAddress);
@@ -104,7 +105,7 @@ namespace ChiuMartSAIS2.App
                     new dbHelper().backupinset(sqlCmd, "INSERT", "supplier");
                     MessageBox.Show(this, "Supplier successfully added", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Adding new Supplier error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -114,13 +115,13 @@ namespace ChiuMartSAIS2.App
 
         private void updateSupplier(string supplierName, string supplierAddress, string supplierContact, string supplierContactPerson, DateTime supplierDate, string supplierTotalBalance, string supplierRemainingBalance, int criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE supplier SET supplierName=@supplierName, supplierAddress=@supplierAddress, supplierContact=@supplierContact, supplierContactPerson=@supplierContactPerson,DateReminder = @DateReminder, TotalBalance= @TotalBalance,RemainingBalance = @RemainingBalance WHERE supplierId=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("supplierName", supplierName);
                     sqlCmd.Parameters.AddWithValue("supplierAddress", supplierAddress);
@@ -135,7 +136,7 @@ namespace ChiuMartSAIS2.App
                     new dbHelper().backupinset(sqlCmd, "UPDATE", "supplier");
                     MessageBox.Show(this, "Supplier successfully updated", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Updating Supplier error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -145,13 +146,13 @@ namespace ChiuMartSAIS2.App
 
         private void deleteSupplier(int criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE supplier SET status='inactive' WHERE supplierId=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
 
@@ -159,7 +160,7 @@ namespace ChiuMartSAIS2.App
                     new dbHelper().backupinset(sqlCmd, "UPDATE", "supplier");
                     MessageBox.Show(this, "Supplier successfully delete", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Deleting Supplier error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -169,13 +170,13 @@ namespace ChiuMartSAIS2.App
 
         private void restoreSupplier(int criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE supplier SET status='active' WHERE supplierId=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
 
@@ -183,7 +184,7 @@ namespace ChiuMartSAIS2.App
                     new dbHelper().backupinset(sqlCmd, "UPDATE", "supplier");
                     MessageBox.Show(this, "Supplier successfully restored", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Restoring Supplier error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -287,7 +288,7 @@ namespace ChiuMartSAIS2.App
         /// <param name="critera"></param>
         private void searchSupplier(string filter, string critera)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -302,13 +303,13 @@ namespace ChiuMartSAIS2.App
                         sqlQuery = "SELECT * FROM supplier WHERE supplierContactPerson LIKE @crit AND status = @status ORDER BY supplierName ASC";
                     }
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     // SQL Query Parameters
                     sqlCmd.Parameters.AddWithValue("crit", "%" + critera + "%");
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     listView1.Items.Clear();
 
@@ -335,7 +336,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

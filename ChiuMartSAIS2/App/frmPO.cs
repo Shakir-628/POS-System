@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using MySql.Data.MySqlClient;
+
 using ChiuMartSAIS2.Classes;
+using System.Data.SqlClient;
 
 namespace ChiuMartSAIS2.App
 {
@@ -39,18 +40,18 @@ namespace ChiuMartSAIS2.App
 
         private void populatePo()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT p.*, s.supplierName, p.oldPrice FROM po as p INNER JOIN supplier as s ON p.supplierId = s.supplierId WHERE p.status = @status  AND p.poStatus != 'Verified' ORDER BY poId ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstPO.Items.Clear();
 
@@ -112,7 +113,7 @@ namespace ChiuMartSAIS2.App
 
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -122,7 +123,7 @@ namespace ChiuMartSAIS2.App
 
         private void getPoByStatus(string poStatus)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -142,11 +143,11 @@ namespace ChiuMartSAIS2.App
                         sqlQuery = "SELECT p.*, s.supplierName, p.oldPrice FROM po as p INNER JOIN supplier as s ON p.supplierId = s.supplierId WHERE p.status = @status AND p.poStatus = 'Verified' ORDER BY poId ASC";
                     }
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstPO.Items.Clear();
                     int ctr = -1;
@@ -211,7 +212,7 @@ namespace ChiuMartSAIS2.App
 
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -221,7 +222,7 @@ namespace ChiuMartSAIS2.App
 
         private void searchPo(string filter, string critera)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -238,13 +239,13 @@ namespace ChiuMartSAIS2.App
                         sqlQuery = "SELECT p.*, s.supplierName, p.oldPrice FROM po as p INNER JOIN supplier as s ON p.supplierId = s.supplierId WHERE p.status = @status AND poId LIKE @crit ORDER BY poId ASC";
                     }
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     // SQL Query Parameters
                     sqlCmd.Parameters.AddWithValue("crit", "%" + critera + "%");
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstPO.Items.Clear();
                     int ctr = -1;
@@ -305,7 +306,7 @@ namespace ChiuMartSAIS2.App
 
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -315,13 +316,13 @@ namespace ChiuMartSAIS2.App
 
         private void backPo(string criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE po SET poStatus='Back Order' WHERE poId=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
 
@@ -329,7 +330,7 @@ namespace ChiuMartSAIS2.App
                     new dbHelper().backupinset(sqlCmd, "UPDATE", "PO");
                     MessageBox.Show(this, "PO turned to Back Order", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Back Order PO error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -339,13 +340,13 @@ namespace ChiuMartSAIS2.App
 
         private void deletePo(string criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE po SET status='inactive' WHERE poId=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
 
@@ -353,7 +354,7 @@ namespace ChiuMartSAIS2.App
                     new dbHelper().backupinset(sqlCmd, "UPDATE", "PO");
                     MessageBox.Show(this, "Po successfully deleted", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Deleting po error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -363,13 +364,13 @@ namespace ChiuMartSAIS2.App
 
         private void restorePo(string criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE po SET status='active' WHERE poId=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
 
@@ -377,7 +378,7 @@ namespace ChiuMartSAIS2.App
                     new dbHelper().backupinset(sqlCmd, "UPDATE", "PO");
                     MessageBox.Show(this, "Po successfully restored", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Restoring po error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -387,13 +388,13 @@ namespace ChiuMartSAIS2.App
 
         private void verifyPo(string criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE po SET poStatus='Verified' WHERE poId=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
 
@@ -401,7 +402,7 @@ namespace ChiuMartSAIS2.App
                     new dbHelper().backupinset(sqlCmd, "UPDATE", "PO");
                     MessageBox.Show(this, "Po successfully verified", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Verifiying po error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -411,13 +412,13 @@ namespace ChiuMartSAIS2.App
 
         private void updateStocks(string qty, string crit)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE products SET productStock = productStock - @qty WHERE productId = @crit";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("qty", qty);
                     sqlCmd.Parameters.AddWithValue("crit", crit);
@@ -425,7 +426,7 @@ namespace ChiuMartSAIS2.App
                     sqlCmd.ExecuteNonQuery();
                     new dbHelper().backupinset(sqlCmd, "UPDATE", "products");
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Updating stocks error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -443,11 +444,11 @@ namespace ChiuMartSAIS2.App
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sqlQuery = "UPDATE po_queue SET stock = stock - @stock WHERE product_id = @productId AND supplier_price = @price";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, con);
                     sqlCmd.Parameters.AddWithValue("stock", stock);
                     sqlCmd.Parameters.AddWithValue("productId", productId);
                     sqlCmd.Parameters.AddWithValue("price", price);
@@ -456,7 +457,7 @@ namespace ChiuMartSAIS2.App
                     new dbHelper().backupinset(sqlCmd, "UPDATE", "po_queue");
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Adding new po error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -467,17 +468,17 @@ namespace ChiuMartSAIS2.App
         {
             prodQty.Clear();
             prodId.Clear();
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT productId, qty, oldPrice FROM po WHERE poId = @crit";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("crit", crit);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -488,7 +489,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Message);
                     MessageBox.Show(this, "Error Retrieving product id", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -499,18 +500,18 @@ namespace ChiuMartSAIS2.App
 
         private void getEditPo()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT p.*, s.supplierName, s.supplierAddress, pr.productName, u.unitDesc, p.oldPrice FROM po as p INNER JOIN supplier as s ON p.supplierId = s.supplierId INNER JOIN products as pr ON p.productId = pr.productId INNER JOIN units as u ON p.unitId = u.unitId WHERE p.poId = @crit";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("crit", lstPO.SelectedItems[lstPO.SelectedItems.Count - 1].Text);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -523,7 +524,7 @@ namespace ChiuMartSAIS2.App
                         address = reader["supplierAddress"].ToString();
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

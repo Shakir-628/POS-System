@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using MySql.Data.MySqlClient;
 
 namespace ChiuMartSAIS2.App.ReportDialog
 {
@@ -32,16 +31,16 @@ namespace ChiuMartSAIS2.App.ReportDialog
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
-                    string sqlQuery = "SELECT t.`transdate`, t.`productId`, t.`unitPrice`, SUM(t.`qty`) as totalSold, t.`supplierPrice`, p.productName FROM `transaction` t LEFT JOIN `products` p ON p.productId = t.productId WHERE (t.`transDate` BETWEEN @from AND @to) GROUP BY t.`unitPrice`, t.`productId`, t.`supplierPrice`";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, con);
+                    string sqlQuery = "SELECT t.transdate, t.productId, t.unitPrice, SUM(t.qty) as totalSold, t.supplierPrice, p.productName FROM [transaction] t LEFT JOIN products p ON p.productId = t.productId WHERE (t.transDate BETWEEN @from AND @to) GROUP BY t.unitPrice, t.productId,t.transdate,p.productName, t.supplierPrice";
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, con);
 
                     sqlCmd.Parameters.AddWithValue("from", dtpFrom.Value.Date);
                     sqlCmd.Parameters.AddWithValue("to", dtpTo.Value.AddDays(1).Date);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     listView1.Items.Clear();
 
@@ -62,7 +61,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

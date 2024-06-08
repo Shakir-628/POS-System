@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ChiuMartSAIS2.exe" size="920064">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ChiuMartSAIS2.exe" size="918016">
       <assemblyIdentity name="ChiuMartSAIS2" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hKll4SYIzetbL1aT8oWD2B013WNHFvwXCH/VAEDKzNY=</dsig:DigestValue>
+        <dsig:DigestValue>MJiSypKWHqbUtv+UBqK1EREfHDcn+AvKUQiNTSyvsWY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -497,13 +497,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ChiuMartSAIS2.exe.config" size="1231">
+  <file name="ChiuMartSAIS2.exe.config" size="1256">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4RJ6gGJS7WAHKoCa0ytaQ4NyAZwyFgAjgi2umQucIt4=</dsig:DigestValue>
+      <dsig:DigestValue>TdXRhr4v933/+m9jO9oPTXvJfx28FnkusKLL2msWBag=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\free3of9.txt" size="2687">

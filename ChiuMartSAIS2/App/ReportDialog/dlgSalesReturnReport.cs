@@ -1,8 +1,9 @@
-﻿using MySql.Data.MySqlClient;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sql = "";
@@ -37,9 +38,9 @@ namespace ChiuMartSAIS2.App.ReportDialog
 
                     sql = "SELECT r.productid, p.productName,r.productPrice,r.qty,r.productPrice*r.qty AS total, r.created_time FROM refund r inner JOIN products p ON p.productid = r.productid WHERE r.status = 'Completed' ORDER BY r.created_time ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
                     Total = 0;
                     listView1.Items.Clear();
                     while (reader.Read())
@@ -54,7 +55,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.ToString());
                 MessageBox.Show(this, "Can't connect to database" + errorCode, errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -63,7 +64,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
 
         private void filterDate()
         {
-            using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -73,11 +74,11 @@ namespace ChiuMartSAIS2.App.ReportDialog
 
                     sql = "SELECT r.productid, p.productName,r.productPrice,r.qty,r.productPrice*r.qty AS total, r.created_time FROM refund r inner JOIN products p ON p.productid = r.productid WHERE r.status = 'Completed' and DATE_FORMAT(created_time,'%Y-%m-%d') BETWEEN @from AND @to ORDER BY created_time ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
                     sqlCmd.Parameters.AddWithValue("from", dtpStart.Value.ToString("yyyy-MM-dd"));
                     sqlCmd.Parameters.AddWithValue("to", dtpEnd.Value.ToString("yyyy-MM-dd"));
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
                     Total = 0;
                     listView1.Items.Clear();
                     while (reader.Read())
@@ -91,7 +92,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
                         Total += double.Parse(reader["total"].ToString());
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.ToString());
                     MessageBox.Show(this, "Can't connect to database" + errorCode, errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

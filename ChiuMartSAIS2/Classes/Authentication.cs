@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using MySql.Data.MySqlClient;
+
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ChiuMartSAIS2.Classes
 {
@@ -77,16 +78,16 @@ namespace ChiuMartSAIS2.Classes
             bool val = false;
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
-                    string sqlQuery = "SELECT u.*, p.* FROM user as u INNER JOIN permission as p ON u.permissionId = p.permissionId WHERE u.status = 'active' AND u.password = @password  AND u.username = @username";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, con);
+                    string sqlQuery = "SELECT u.*, p.* FROM [user] as u INNER JOIN permission as p ON u.permissionId = p.permissionId WHERE u.status = 'active' AND u.password = @password  AND u.username = @username";
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, con);
 
                     sqlCmd.Parameters.AddWithValue("username", username);
                     sqlCmd.Parameters.AddWithValue("password", password);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -124,7 +125,7 @@ namespace ChiuMartSAIS2.Classes
                 }
                 return val;
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show("User authentication error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -138,16 +139,16 @@ namespace ChiuMartSAIS2.Classes
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
-                    string sqlQuery = "SELECT u.*, p.* FROM user as u INNER JOIN permission as p ON u.permissionId = p.permissionId WHERE u.status = 'active' AND u.username = @username";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, con);
+                    string sqlQuery = "SELECT u.*, p.* FROM [user] as u INNER JOIN permission as p ON u.permissionId = p.permissionId WHERE u.status = 'active' AND u.username = @username";
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, con);
 
                     sqlCmd.Parameters.AddWithValue("username", usernam);
                     //sqlCmd.Parameters.AddWithValue("password", password);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -183,7 +184,7 @@ namespace ChiuMartSAIS2.Classes
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show("User authentication error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -196,16 +197,16 @@ namespace ChiuMartSAIS2.Classes
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
-                    string sqlQuery = "SELECT u.*, p.* FROM user as u INNER JOIN permission as p ON u.permissionId = p.permissionId WHERE u.status = 'active' AND u.password = @password";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, con);
+                    string sqlQuery = "SELECT u.*, p.* FROM [user] as u INNER JOIN permission as p ON u.permissionId = p.permissionId WHERE u.status = 'active' AND u.password = @password";
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, con);
 
                     sqlCmd.Parameters.AddWithValue("username", username);
                     sqlCmd.Parameters.AddWithValue("password", password);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -241,7 +242,7 @@ namespace ChiuMartSAIS2.Classes
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show("User authentication error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

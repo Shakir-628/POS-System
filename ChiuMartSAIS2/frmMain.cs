@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChiuMartSAIS2.Classes;
+using System.Data.SqlClient;
 
 namespace ChiuMartSAIS2
 {
@@ -118,7 +119,7 @@ namespace ChiuMartSAIS2
 
         private void btnNotes_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"C:\Windows\Sysnative\StikyNot.exe");
+            System.Diagnostics.Process.Start(@"C:\Windows\Sysnative\StickyNote.exe");
         }
 
         private void btnInventoryReport_Click(object sender, EventArgs e)
@@ -287,17 +288,17 @@ namespace ChiuMartSAIS2
 
             string decryptstring = Classes.functions.ReadEncryptedfile(file.FullName);
 
-            using (MySqlConnection conn = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection conn = new SqlConnection(conf.connectionstring))
             {
-                using (MySqlCommand cmd = new MySqlCommand())
+                using (SqlCommand cmd = new SqlCommand())
                 {
-                    using (MySqlBackup mb = new MySqlBackup(cmd))
-                    {
-                        cmd.Connection = conn;
-                        conn.Open();
-                        mb.ImportFromString(decryptstring);
-                        conn.Close();
-                    }
+                    //using (MySqlBackup mb = new MySqlBackup(cmd))
+                    //{
+                    //    cmd.Connection = conn;
+                    //    conn.Open();
+                    //    mb.ImportFromString(decryptstring);
+                    //    conn.Close();
+                    //}
                 }
             }
             MessageBox.Show("Database successfully imported");
@@ -315,17 +316,17 @@ namespace ChiuMartSAIS2
             }
             string backupstring = string.Empty;
 
-            using (MySqlConnection conn = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection conn = new SqlConnection(conf.connectionstring))
             {
-                using (MySqlCommand cmd = new MySqlCommand())
+                using (SqlCommand cmd = new SqlCommand())
                 {
-                    using (MySqlBackup mb = new MySqlBackup(cmd))
-                    {
-                        cmd.Connection = conn;
-                        conn.Open();
-                        backupstring = mb.ExportToString();
-                        conn.Close();
-                    }
+                    //using (MySqlBackup mb = new MySqlBackup(cmd))
+                    //{
+                    //    cmd.Connection = conn;
+                    //    conn.Open();
+                    //    backupstring = mb.ExportToString();
+                    //    conn.Close();
+                    //}
                 }
             }
             Classes.functions.WriteEncryptedFile(file, backupstring);
@@ -413,16 +414,16 @@ namespace ChiuMartSAIS2
 
         //public void SupplierNotify() 
         //{
-        //    using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+        //    using (SqlConnection Con = new SqlConnection(conf.connectionstring))
         //    {
         //        try
         //        {
         //            Con.Open();
         //            string sqlQuery = "SELECT SUM(unitPrice) AS openingAmount FROM TRANSACTION WHERE CAST(transdate AS DATE) = DATE_ADD(CURDATE(), INTERVAL -1 DAY)";
 
-        //            MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+        //            SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
-        //            MySqlDataReader reader = sqlCmd.ExecuteReader();
+        //            SqlDataReader reader = sqlCmd.ExecuteReader();
 
         //            while (reader.Read())
         //            {
@@ -437,7 +438,7 @@ namespace ChiuMartSAIS2
         //                }
         //            }
         //        }
-        //        catch (MySqlException ex)
+        //        catch (SqlException ex)
         //        {
         //            string errorCode = string.Format("Error Code : {0}", ex.Number);
         //            MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -1,8 +1,9 @@
-﻿using MySql.Data.MySqlClient;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sql = "";
@@ -37,9 +38,9 @@ namespace ChiuMartSAIS2.App.ReportDialog
 
                     sql = "SELECT Id,OpeningAmount,NetSale,CashSale,RefundAmount,CashinHand,created_time FROM Endshift ORDER BY created_time ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
                     Total = 0;
                     listView1.Items.Clear();
                     while (reader.Read())
@@ -55,7 +56,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.ToString());
                 MessageBox.Show(this, "Can't connect to database" + errorCode, errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -64,7 +65,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
 
         private void filterDate()
         {
-            using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -75,11 +76,11 @@ namespace ChiuMartSAIS2.App.ReportDialog
                     sql = "SELECT Id,OpeningAmount,NetSale,CashSale,RefundAmount,CashinHand,created_time FROM Endshift WHERE DATE_FORMAT(created_time,'%Y-%m-%d') BETWEEN @from AND @to ORDER BY created_time ASC";
 
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
                     sqlCmd.Parameters.AddWithValue("from", dtpStart.Value.ToString("yyyy-MM-dd"));
                     sqlCmd.Parameters.AddWithValue("to", dtpEnd.Value.ToString("yyyy-MM-dd"));
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
                     Total = 0;
                     listView1.Items.Clear();
                     while (reader.Read())
@@ -94,7 +95,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
                         Total += double.Parse(reader["CashinHand"].ToString());
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.ToString());
                     MessageBox.Show(this, "Can't connect to database" + errorCode, errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

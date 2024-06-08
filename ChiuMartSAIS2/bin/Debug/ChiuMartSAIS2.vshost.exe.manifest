@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hKll4SYIzetbL1aT8oWD2B013WNHFvwXCH/VAEDKzNY=</dsig:DigestValue>
+        <dsig:DigestValue>bw6VLdMgHAoxS5eHRzOLibqDewM8DOUFaWH1evRt5T0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -497,13 +497,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ChiuMartSAIS2.exe.config" size="1231">
+  <file name="ChiuMartSAIS2.exe.config" size="1250">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4RJ6gGJS7WAHKoCa0ytaQ4NyAZwyFgAjgi2umQucIt4=</dsig:DigestValue>
+      <dsig:DigestValue>SHNtrsRbh1D/c5B841GWgEicQubKC0IvBUYpWfwxUVw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\free3of9.txt" size="2687">

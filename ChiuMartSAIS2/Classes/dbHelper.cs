@@ -1,8 +1,9 @@
 ﻿using ChiuMartSAIS2.Classes;
-using MySql.Data.MySqlClient;
+
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,17 +24,17 @@ namespace ChiuMartSAIS2.Classes
         {
             conf = new Classes.Configuration();
             string result = "";
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT p.value FROM config as p WHERE p.status = '1' AND p.name = @name";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("name", nam);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -41,7 +42,7 @@ namespace ChiuMartSAIS2.Classes
                     }
                     return result;
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     //  MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -54,7 +55,7 @@ namespace ChiuMartSAIS2.Classes
         {
             conf = new Classes.Configuration();
             DataTable result = new DataTable();
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -66,27 +67,27 @@ namespace ChiuMartSAIS2.Classes
                     //                         units ON products.unitId = units.unitId LEFT OUTER JOIN
                     //                         client ON transaction.clientId = client.clientId
                     //WHERE        (transaction.orNo = @orno)";
-                    string sqlQuery = @"SELECT transaction.orNo, products.productName,`change`.`change`,`change`.`paid`, units.unitDesc, IFNULL(client.clientName,'Walk in Customer') AS clientName, client.clientAddress, transaction.qty, transaction.unitPrice,products.retailPrice,IFNULL(products.retailPrice -  transaction.unitPrice,0) AS discount, transaction.transDate,client.clientContact
+                    string sqlQuery = @"SELECT trans.orNo, products.productName,change.change,change.paid, units.unitDesc, IsNULL(client.clientName,'Walk in Customer') AS clientName, client.clientAddress, trans.qty, trans.unitPrice,products.retailPrice,ISNULL(products.retailPrice -  trans.unitPrice,0) AS discount, trans.transDate,client.clientContact
 FROM category INNER JOIN
                          products ON category.categoryId = products.categoryId INNER JOIN
-                         TRANSACTION ON products.productId = transaction.productId 
+                         [TRANSACTION] trans ON products.productId = trans.productId 
                          INNER JOIN units ON products.unitId = units.unitId LEFT OUTER JOIN
-                         CLIENT ON transaction.clientId = client.clientId
-                         RIGHT JOIN `change` ON `change`.`transId` = transaction.`transId`
-WHERE (transaction.orNo = @orno)";
+                         CLIENT ON trans.clientId = client.clientId
+                         RIGHT JOIN change ON change.transId = trans.transId
+WHERE (trans.orNo = @orno)";
 
 
 
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("orno", orno);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
                     result.Load(reader);
 
                     return result;
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     //  MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -101,7 +102,7 @@ WHERE (transaction.orNo = @orno)";
         {
             conf = new Classes.Configuration();
             DataTable result = new DataTable();
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -129,15 +130,15 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
 
 )";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     // sqlCmd.Parameters.AddWithValue("orno", orno);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
                     result.Load(reader);
 
                     return result;
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     //  MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -151,17 +152,17 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
         {
             conf = new Classes.Configuration();
             string result = "";
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT p.barcode FROM products as p WHERE   p.barcode = @barcode";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("barcode", bar);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -171,7 +172,7 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
                     { return false; }
                     else { return true; }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     //  MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -186,14 +187,14 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
         {
             conf = new Classes.Configuration();
 
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    string sqlQuery = "insert into `change`(`change`,paid,transId) values (@change,@paid,@transid)";
+                    string sqlQuery = "insert into change(change,paid,transId) values (@change,@paid,@transid)";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("change", change);
                     sqlCmd.Parameters.AddWithValue("paid", paid);
                     sqlCmd.Parameters.AddWithValue("transid", transId);
@@ -202,7 +203,7 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
                     new dbHelper().backupinset(sqlCmd, "INSERT", "change");
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     //  MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -217,7 +218,7 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
             conf = new Classes.Configuration();
             string token = "";
             string dt = "";
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -227,10 +228,10 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
                     string sqlQuery = "SELECT c.token,c.expiryDate FROM company as c order by c.id ";
 
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     //sqlCmd.Parameters.AddWithValue("barcode", bar);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -261,7 +262,7 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
                         return false;
                     }
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     return false;
@@ -273,15 +274,15 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
         {
             conf = new Classes.Configuration();
 
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    //string sqlQuery = "insert into `company`(`license`,expiryDate,token) values (@licenseText, AES_ENCRYPT(@expiryDate,'ponka'),AES_ENCRYPT(@token,'ponka')  )";
-                    string sqlQuery = "insert into `company`(`license`,expiryDate,token) values (@licenseText, @expiryDate,@token)";
+                    //string sqlQuery = "insert into company(license,expiryDate,token) values (@licenseText, AES_ENCRYPT(@expiryDate,'ponka'),AES_ENCRYPT(@token,'ponka')  )";
+                    string sqlQuery = "insert into company(license,expiryDate,token) values (@licenseText, @expiryDate,@token)";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("licenseText", licenseText);
                     sqlCmd.Parameters.AddWithValue("expiryDate", expiryDate);
                     sqlCmd.Parameters.AddWithValue("token", token);
@@ -289,7 +290,7 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
                     sqlCmd.ExecuteNonQuery();
                     new dbHelper().backupinset(sqlCmd, "INSERT", "company");
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     //  MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -297,7 +298,7 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
             }
         }
 
-        public void backupinset(MySqlCommand sqlCmdQry, string QryType, string tableName)
+        public void backupinset(SqlCommand sqlCmdQry, string QryType, string tableName)
         {
 
             string QueryText = ToStringP(sqlCmdQry, sqlCmdQry.CommandText);
@@ -305,36 +306,36 @@ SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.nam
 
             conf = new Classes.Configuration();
 
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    //string sqlQuery = "insert into `company`(`license`,expiryDate,token) values (@licenseText, AES_ENCRYPT(@expiryDate,'ponka'),AES_ENCRYPT(@token,'ponka')  )";
-                    string sqlQuery = @"insert into `Backup` (
-             `status`,
-             `queryType`,
-             `tableName`,            
-             `query`)
-VALUES(   0,   @queryType,@tableName,@query)";
+                    //string sqlQuery = "insert into company(license,expiryDate,token) values (@licenseText, AES_ENCRYPT(@expiryDate,'ponka'),AES_ENCRYPT(@token,'ponka')  )";
+                    string sqlQuery = @"insert into [Backup](
+             status,
+             queryType,
+             tableName,            
+             query)
+VALUES(0,@queryType,@tableName,@query)";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("queryType", QryType);
                     sqlCmd.Parameters.AddWithValue("tableName", tableName);
                     sqlCmd.Parameters.AddWithValue("query", QueryText);
 
                     sqlCmd.ExecuteNonQuery();
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                 }
             }
         }
 
-        public string ToStringP(MySqlCommand parameters, string sqlQuery)
+        public string ToStringP(SqlCommand parameters, string sqlQuery)
         {
-            return parameters.Parameters.Cast<MySqlParameter>().Aggregate(sqlQuery, (current, p) => current.Replace("@" + p.ParameterName, "'" + p.Value.ToString() + "'"));
+            return parameters.Parameters.Cast<SqlParameter>().Aggregate(sqlQuery, (current, p) => current.Replace("@" + p.ParameterName, "'" + p.Value.ToString() + "'"));
         }
         public bool syncLive()
         {
@@ -342,17 +343,17 @@ VALUES(   0,   @queryType,@tableName,@query)";
             conf = new Classes.Configuration();
             string qry = "";
             string id = "";
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
-                    string sqlQuery = "SELECT c.query,c.id FROM backup as c where status = 0 order by c.id ";
+                    string sqlQuery = "SELECT c.query,c.id FROM [Backup] as c where status = 0 order by c.id ";
 
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -363,9 +364,9 @@ VALUES(   0,   @queryType,@tableName,@query)";
                         #region update code 
 
 
-                        string sqlQueryupdate = "update `backup` set status =1 where id=@id";
+                        string sqlQueryupdate = "update [Backup] set status = 1 where id=@id";
 
-                        MySqlCommand sqlCmdu = new MySqlCommand(sqlQueryupdate, Con);
+                        SqlCommand sqlCmdu = new SqlCommand(sqlQueryupdate, Con);
                         sqlCmdu.Parameters.AddWithValue("id", id);
 
                         sqlCmdu.ExecuteNonQuery();
@@ -377,7 +378,7 @@ VALUES(   0,   @queryType,@tableName,@query)";
 
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     return false;

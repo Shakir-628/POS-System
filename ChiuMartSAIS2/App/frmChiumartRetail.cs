@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using MySql.Data.MySqlClient;
 using ChiuMartSAIS2.Classes;
+using System.Data.SqlClient;
 
 namespace ChiuMartSAIS2.App
 {
@@ -30,16 +29,16 @@ namespace ChiuMartSAIS2.App
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sql = "SELECT u.*, c.* FROM conversion c INNER JOIN user u ON c.username = u.username WHERE c.created_date BETWEEN @from AND @to";
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
 
                     sqlCmd.Parameters.AddWithValue("from", dtpFrom.Value.AddDays(-1));
                     sqlCmd.Parameters.AddWithValue("to", dtpTo.Value.AddDays(1));
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     listView1.Items.Clear();
                     while (reader.Read())
@@ -52,7 +51,7 @@ namespace ChiuMartSAIS2.App
                     }
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, ex.Message.ToString(), errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -64,11 +63,11 @@ namespace ChiuMartSAIS2.App
         {
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sql = "INSERT INTO conversion(username) VALUES(@username)";
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
                     sqlCmd.Parameters.AddWithValue("username", Classes.Authentication.Instance.username);
 
                     sqlCmd.ExecuteNonQuery();
@@ -77,7 +76,7 @@ namespace ChiuMartSAIS2.App
                     MessageBox.Show("New conversion of products was made successfully", "Conversion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show(this, "Restoring client error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

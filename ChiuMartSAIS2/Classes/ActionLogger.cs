@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using MySql.Data.MySqlClient;
 
 namespace ChiuMartSAIS2.Classes
 {
@@ -18,11 +17,11 @@ namespace ChiuMartSAIS2.Classes
 
             try
             {
-                using (MySqlConnection con = new MySqlConnection(conf.connectionstring))
+                using (SqlConnection con = new SqlConnection(conf.connectionstring))
                 {
                     con.Open();
                     string sql = "INSERT INTO logs(quantity, unit_id, product_id, log_type, relationId, username, clientId, paymentMethod, price, supplierPrice, supplierId) VALUES(@quantity, @unit_id, @product_id, @log_type, @relationId, @username, @clientId, @paymentMethod, @price, @supplierPrice, @supplierId)";
-                    MySqlCommand sqlCmd = new MySqlCommand(sql, con);
+                    SqlCommand sqlCmd = new SqlCommand(sql, con);
 
                     sqlCmd.Parameters.AddWithValue("quantity", quantity);
                     sqlCmd.Parameters.AddWithValue("unit_id", unit_id);
@@ -40,7 +39,7 @@ namespace ChiuMartSAIS2.Classes
                     new dbHelper().backupinset(sqlCmd, "INSERT", "logs");
                 }
             }
-            catch (MySqlException ex)
+            catch (SqlException ex)
             {
                 string errorCode = string.Format("Error Code : {0}", ex.Number);
                 MessageBox.Show("Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using MySql.Data.MySqlClient;
+
 using ChiuMartSAIS2.Classes;
+using System.Data.SqlClient;
 
 namespace ChiuMartSAIS2.App
 {
@@ -44,15 +45,15 @@ namespace ChiuMartSAIS2.App
         /// </summary>
         private void populateProduct()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT p.*, u.*, c.* FROM products as p INNER JOIN units as u ON p.unitId = u.unitId INNER JOIN category as c ON p.categoryId = c.categoryId WHERE p.status = 'active' ORDER BY p.productName ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstProducts.Items.Clear();
 
@@ -67,7 +68,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -80,7 +81,7 @@ namespace ChiuMartSAIS2.App
         /// </summary>
         private void getProductByStockLevel(string stockLevel)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -103,8 +104,8 @@ namespace ChiuMartSAIS2.App
                         sqlQuery = "SELECT p.*, u.*, c.* FROM products as p INNER JOIN units as u ON p.unitId = u.unitId INNER JOIN category as c ON p.categoryId = c.categoryId WHERE p.productStock <= 0 AND p.status = 'active' ORDER BY p.productName ASC";
                     }
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstProducts.Items.Clear();
 
@@ -118,7 +119,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.ToString());
                     MessageBox.Show(this, errorCode + "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -131,17 +132,17 @@ namespace ChiuMartSAIS2.App
         /// </summary>
         private void searchProduct(string criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT p.*, u.*, c.* FROM products as p INNER JOIN units as u ON p.unitId = u.unitId INNER JOIN category as c ON p.categoryId = c.categoryId WHERE p.productName LIKE @criteria ORDER BY p.productName ASC";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("criteria", "%" + criteria + "%");
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     lstProducts.Items.Clear();
 
@@ -155,7 +156,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -170,13 +171,13 @@ namespace ChiuMartSAIS2.App
         /// <param name="criteria"></param>
         private void updateStock(int productStock, int criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE products SET productStock=@productStock WHERE productId=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("productStock", productStock);
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
@@ -185,7 +186,7 @@ namespace ChiuMartSAIS2.App
                     new dbHelper().backupinset(sqlCmd, "UPDATE", "products");
                     MessageBox.Show(this, "Stock successfully updated", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Updating stock error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

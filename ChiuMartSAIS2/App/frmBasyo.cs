@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace ChiuMartSAIS2.App
 {
@@ -27,18 +27,18 @@ namespace ChiuMartSAIS2.App
 
         private void populateBasyo()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT * FROM basyo WHERE date_created BETWEEN @start AND @end ";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("start", dtpFrom.Value.Date);
                     sqlCmd.Parameters.AddWithValue("end", dtpTo.Value.AddDays(1).Date);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     listView1.Items.Clear();
 
@@ -51,7 +51,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -61,18 +61,18 @@ namespace ChiuMartSAIS2.App
 
         private void getTotalBasyoSold()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT SUM(qty) as total FROM `transaction` WHERE `productId` = '35' AND transDate BETWEEN @start AND @end ";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("start", dtpFrom.Value.Date);
                     sqlCmd.Parameters.AddWithValue("end", dtpTo.Value.AddDays(1).Date);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -80,7 +80,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.ToString());
                     MessageBox.Show(this, "Can't connect to database"+ errorCode, errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -90,18 +90,18 @@ namespace ChiuMartSAIS2.App
 
         private void getTotalBasyoReturned()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "SELECT SUM(basyo_returned) as total FROM basyo WHERE date_created BETWEEN @start AND @end ";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("start", dtpFrom.Value.Date);
                     sqlCmd.Parameters.AddWithValue("end", dtpTo.Value.AddDays(1).Date);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     while (reader.Read())
                     {
@@ -109,7 +109,7 @@ namespace ChiuMartSAIS2.App
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -119,20 +119,20 @@ namespace ChiuMartSAIS2.App
 
         private void deleteBasyo(int criteria)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE basyo SET status='inactive' WHERE id=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
 
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show(this, "Basyo history successfully deleted", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Deleting basyo history error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -142,13 +142,13 @@ namespace ChiuMartSAIS2.App
 
         private void updateBasyo(int criteria, string basyo_returned)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
                     Con.Open();
                     string sqlQuery = "UPDATE basyo SET basyo_returned=@basyo_returned WHERE id=@criteria";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("criteria", criteria);
                     sqlCmd.Parameters.AddWithValue("basyo_returned", basyo_returned);
@@ -156,7 +156,7 @@ namespace ChiuMartSAIS2.App
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show(this, "Basyo successfully updated", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Updating basyo error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -166,20 +166,20 @@ namespace ChiuMartSAIS2.App
 
         private void insertBasyo(string basyo_returned)
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
 
                     Con.Open();
                     string sqlQuery = "INSERT INTO basyo (basyo_returned) VALUES (@basyo_returned)";
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     sqlCmd.Parameters.AddWithValue("basyo_returned", basyo_returned);
 
                     sqlCmd.ExecuteNonQuery();
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Basyo error", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);

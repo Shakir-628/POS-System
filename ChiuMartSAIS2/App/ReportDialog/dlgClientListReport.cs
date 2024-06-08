@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using MySql.Data.MySqlClient;
+
 
 namespace ChiuMartSAIS2.App.ReportDialog
 {
@@ -26,7 +27,7 @@ namespace ChiuMartSAIS2.App.ReportDialog
 
         private void populateClient()
         {
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -43,10 +44,10 @@ GROUP BY c.clientid,c.`clientName`,c.`clientContact`,c.`clientAddress`,c.`create
  ORDER BY c.clientName ASC ";
 
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     listView1.Items.Clear();
                     string amount = "0";
@@ -75,7 +76,7 @@ GROUP BY c.clientid,c.`clientName`,c.`clientContact`,c.`clientAddress`,c.`create
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -90,7 +91,7 @@ GROUP BY c.clientid,c.`clientName`,c.`clientContact`,c.`clientAddress`,c.`create
             {
                 return;
             }
-            using (MySqlConnection Con = new MySqlConnection(conf.connectionstring))
+            using (SqlConnection Con = new SqlConnection(conf.connectionstring))
             {
                 try
                 {
@@ -107,13 +108,13 @@ c.status = @status and
 GROUP BY c.clientid,c.`clientName`,c.`clientContact`,c.`clientAddress`,c.`created_date`,c.`updated_date`,c.status
  ORDER BY c.clientName ASC ";
 
-                    MySqlCommand sqlCmd = new MySqlCommand(sqlQuery, Con);
+                    SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
 
                     // SQL Query Parameters
                     sqlCmd.Parameters.AddWithValue("crit", critera);
                     sqlCmd.Parameters.AddWithValue("status", this.status);
 
-                    MySqlDataReader reader = sqlCmd.ExecuteReader();
+                    SqlDataReader reader = sqlCmd.ExecuteReader();
 
                     listView1.Items.Clear();
                     string amount = "0";
@@ -142,7 +143,7 @@ GROUP BY c.clientid,c.`clientName`,c.`clientContact`,c.`clientAddress`,c.`create
                     }
 
                 }
-                catch (MySqlException ex)
+                catch (SqlException ex)
                 {
                     string errorCode = string.Format("Error Code : {0}", ex.Number);
                     MessageBox.Show(this, "Can't connect to database", errorCode, MessageBoxButtons.OK, MessageBoxIcon.Error);
