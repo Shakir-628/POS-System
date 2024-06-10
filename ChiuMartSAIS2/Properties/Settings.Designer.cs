@@ -50,7 +50,7 @@ namespace ChiuMartSAIS2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=lifecare1;Password;Ahmed@321;database=lifecare")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MUHAMMADSHAKIRJ;Initial Catalog=LifeCare;Integrated Security=True")]
         public string chuisaisConnectionString {
             get {
                 return ((string)(this["chuisaisConnectionString"]));

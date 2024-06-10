@@ -11,10 +11,10 @@
     <Setting Name="chuisaisConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionString&gt;server=localhost;user id=lifecare1;Password;Ahmed@321;database=lifecare&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+  &lt;ConnectionString&gt;Data Source=MUHAMMADSHAKIRJ;Initial Catalog=LifeCare;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">server=localhost;user id=lifecare1;Password;Ahmed@321;database=lifecare</Value>
+      <Value Profile="(Default)">Data Source=MUHAMMADSHAKIRJ;Initial Catalog=LifeCare;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

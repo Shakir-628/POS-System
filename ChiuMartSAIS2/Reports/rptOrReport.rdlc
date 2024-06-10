@@ -1,127 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
-  <DataSources>
-    <DataSource Name="chiumart_data">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>2a1e2aed-4384-4ded-b0c8-c92ce7296363</rd:DataSourceID>
-    </DataSource>
-    <DataSource Name="poschiDataSet">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>4c37cf6e-c312-48b9-b343-0601f63223ce</rd:DataSourceID>
-    </DataSource>
-  </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet2">
-      <Fields>
-        <Field Name="company_address">
-          <DataField>company_address</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="company_name">
-          <DataField>company_name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="company_phone">
-          <DataField>company_phone</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="company_policy">
-          <DataField>company_policy</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="developer_info">
-          <DataField>developer_info</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>poschiDataSet</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>poschiDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\poschiDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>company</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DataSet1">
-      <Fields>
-        <Field Name="orNo">
-          <DataField>orNo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="productName">
-          <DataField>productName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="unitDesc">
-          <DataField>unitDesc</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="clientName">
-          <DataField>clientName</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="clientAddress">
-          <DataField>clientAddress</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="qty">
-          <DataField>qty</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="unitPrice">
-          <DataField>unitPrice</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="transDate">
-          <DataField>transDate</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="retailPrice">
-          <DataField>retailPrice</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="discount">
-          <DataField>discount</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="change">
-          <DataField>change</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="paid">
-          <DataField>paid</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="clientContact">
-          <DataField>clientContact</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>poschiDataSet</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>poschiDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\tnssuet\Downloads\ChiuMartSAIS2-master\ChiuMartSAIS2-master\ChiuMartSAIS2\poschiDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>config</rd:TableName>
-        <rd:TableAdapterFillMethod />
-        <rd:TableAdapterGetDataMethod />
-        <rd:TableAdapterName />
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
       <Tablix Name="Tablix1">
@@ -2371,7 +2249,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First(Fields!clientAddress.Value, "DataSet1")</Value>
+                  <Value>=First(Fields!company_Address.Value, "DataSet2")</Value>
                   <Style>
                     <FontSize>7pt</FontSize>
                   </Style>
@@ -2405,7 +2283,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=First( Fields!company_name.Value , "DataSet2")</Value>
+                  <Value>=First(Fields!company_name.Value, "DataSet2")</Value>
                   <Style>
                     <FontSize>14pt</FontSize>
                     <FontWeight>Heavy</FontWeight>
@@ -2583,6 +2461,129 @@
     <BottomMargin>0.1in</BottomMargin>
     <Style />
   </Page>
-  <rd:ReportID>c74f30a4-80c2-4e22-b31e-3b3b5f004e15</rd:ReportID>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="chiumart_data">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>2a1e2aed-4384-4ded-b0c8-c92ce7296363</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="poschiDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>4c37cf6e-c312-48b9-b343-0601f63223ce</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>poschiDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="orNo">
+          <DataField>orNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="productName">
+          <DataField>productName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="unitDesc">
+          <DataField>unitDesc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="clientName">
+          <DataField>clientName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="clientAddress">
+          <DataField>clientAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="qty">
+          <DataField>qty</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="unitPrice">
+          <DataField>unitPrice</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="transDate">
+          <DataField>transDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="retailPrice">
+          <DataField>retailPrice</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="discount">
+          <DataField>discount</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="change">
+          <DataField>change</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="paid">
+          <DataField>paid</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="clientContact">
+          <DataField>clientContact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>poschiDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Shakir\Desktop\LifeCare POS\POS-System\ChiuMartSAIS2\poschiDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>config</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet2">
+      <Query>
+        <DataSourceName>poschiDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="company_address">
+          <DataField>company_address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="company_name">
+          <DataField>company_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="company_phone">
+          <DataField>company_phone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="company_policy">
+          <DataField>company_policy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="developer_info">
+          <DataField>developer_info</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>poschiDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Shakir\Desktop\LifeCare POS\POS-System\ChiuMartSAIS2\poschiDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>company</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>c74f30a4-80c2-4e22-b31e-3b3b5f004e15</rd:ReportID>
 </Report>

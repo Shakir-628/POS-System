@@ -107,29 +107,36 @@ WHERE (trans.orNo = @orno)";
                 try
                 {
                     Con.Open();
-                    string sqlQuery = @"select * from
-(
- (SELECT p.value as company_name FROM config as p WHERE p.status = '1' AND p.name ='company_name' )
- as y 
-   join 
-    (
-SELECT p.value as company_address FROM config as p WHERE p.status = '1' AND p.name ='company_address'
-    ) as j 
-join 
-    (
-SELECT p.value as company_phone FROM config as p WHERE p.status = '1' AND p.name ='company_phone'
-    ) as i 
-join 
-    (
-SELECT p.value as company_policy FROM config as p WHERE p.status = '1' AND p.name ='company_policy'
-    ) as k
-join 
-    (
-SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.name ='developer_info'
-    ) as l
+                    //                    string sqlQuery = @"select * from
+                    //(
+                    // (SELECT p.value as company_name FROM config as p WHERE p.status = '1' AND p.name ='company_name' )
+                    // as y 
+                    //   join 
+                    //    (
+                    //SELECT p.value as company_address FROM config as p WHERE p.status = '1' AND p.name ='company_address'
+                    //    ) as j 
+                    //join 
+                    //    (
+                    //SELECT p.value as company_phone FROM config as p WHERE p.status = '1' AND p.name ='company_phone'
+                    //    ) as i 
+                    //join 
+                    //    (
+                    //SELECT p.value as company_policy FROM config as p WHERE p.status = '1' AND p.name ='company_policy'
+                    //    ) as k
+                    //join 
+                    //    (
+                    //SELECT p.value as developer_info FROM config as p WHERE p.status = '1' AND p.name ='developer_info'
+                    //    ) as l
 
-)";
-
+                    //)";
+                    string sqlQuery = @"SELECT 
+    MAX(CASE WHEN CAST(p.name AS VARCHAR(MAX)) = 'company_name' THEN CAST(p.value AS VARCHAR(MAX)) END) AS company_name,
+    MAX(CASE WHEN CAST(p.name AS VARCHAR(MAX)) = 'company_address' THEN CAST(p.value AS VARCHAR(MAX)) END) AS company_address,
+    MAX(CASE WHEN CAST(p.name AS VARCHAR(MAX)) = 'company_mobile' THEN CAST(p.value AS VARCHAR(MAX)) END) AS company_phone,
+    MAX(CASE WHEN CAST(p.name AS VARCHAR(MAX)) = 'company_policy' THEN CAST(p.value AS VARCHAR(MAX)) END) AS company_policy,
+    MAX(CASE WHEN CAST(p.name AS VARCHAR(MAX)) = 'company_website' THEN CAST(p.value AS VARCHAR(MAX)) END) AS developer_info
+FROM config p
+WHERE p.status = '1';";
                     SqlCommand sqlCmd = new SqlCommand(sqlQuery, Con);
                     // sqlCmd.Parameters.AddWithValue("orno", orno);
 

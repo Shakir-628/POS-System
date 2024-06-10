@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ChiuMartSAIS2.exe.manifest" size="33099">
+    <dependentAssembly dependencyType="install" codebase="ChiuMartSAIS2.exe.manifest" size="33100">
       <assemblyIdentity name="ChiuMartSAIS2.exe" version="1.0.1.26" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e+U8DaGVY1/Ds0u546Ure/fznjXzTyzY+W8Ax5y57zg=</dsig:DigestValue>
+        <dsig:DigestValue>a1WZPOHKZDEeEsim9ZB9xVXc4/h5DHBOgJw6YIprOTE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

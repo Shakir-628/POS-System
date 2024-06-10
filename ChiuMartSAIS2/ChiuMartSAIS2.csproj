@@ -417,6 +417,11 @@
     <Compile Include="chiumart_data.designer.cs">
       <DependentUpon>chiumart_data.cs</DependentUpon>
     </Compile>
+    <Compile Include="chuisaisDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>chuisaisDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Classes\ActionLogger.cs" />
     <Compile Include="Classes\Authentication.cs" />
     <Compile Include="Classes\Configuration.cs" />
@@ -436,8 +441,24 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="lifecareDataSet.cs">
+      <DependentUpon>lifecareDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lifecareDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lifecareDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="poschiDataSet.cs">
       <DependentUpon>poschiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="poschiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>poschiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="poschiDataSet1.cs">
+      <DependentUpon>poschiDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -632,6 +653,28 @@
     <None Include="chiumart_data.xss">
       <DependentUpon>chiumart_data.xsd</DependentUpon>
     </None>
+    <None Include="chuisaisDataSet.xsc">
+      <DependentUpon>chuisaisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="chuisaisDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>chuisaisDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="chuisaisDataSet.xss">
+      <DependentUpon>chuisaisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="lifecareDataSet.xsc">
+      <DependentUpon>lifecareDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="lifecareDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lifecareDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="lifecareDataSet.xss">
+      <DependentUpon>lifecareDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="poschiDataSet.xsc">
       <DependentUpon>poschiDataSet.xsd</DependentUpon>
@@ -639,6 +682,7 @@
     <None Include="poschiDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>poschiDataSet.Designer.cs</LastGenOutput>
     </None>
     <None Include="poschiDataSet.xss">
       <DependentUpon>poschiDataSet.xsd</DependentUpon>
@@ -649,6 +693,7 @@
     <None Include="poschiDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>poschiDataSet1.Designer.cs</LastGenOutput>
     </None>
     <None Include="poschiDataSet1.xss">
       <DependentUpon>poschiDataSet1.xsd</DependentUpon>
